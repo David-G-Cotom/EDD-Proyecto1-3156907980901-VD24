@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.30"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "_EDD_Proyecto1_3156907980901",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "_EDD_Proyecto1_3156907980901::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-_EDD_Proyecto1_3156907980901-Debug-84a68d12ba1dd9b3f938.json",
+					"name" : "_EDD_Proyecto1_3156907980901",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/cmake-build-debug",
+		"source" : "E:/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
