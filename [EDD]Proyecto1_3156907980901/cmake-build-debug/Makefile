@@ -153,6 +153,54 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/ListaCircularDoblementeEnlazada/ListaTransacciones.o: src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.o
+.PHONY : src/ListaCircularDoblementeEnlazada/ListaTransacciones.o
+
+# target to build an object file
+src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.o
+.PHONY : src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.o
+
+src/ListaCircularDoblementeEnlazada/ListaTransacciones.i: src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.i
+.PHONY : src/ListaCircularDoblementeEnlazada/ListaTransacciones.i
+
+# target to preprocess a source file
+src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.i
+.PHONY : src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.i
+
+src/ListaCircularDoblementeEnlazada/ListaTransacciones.s: src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.s
+.PHONY : src/ListaCircularDoblementeEnlazada/ListaTransacciones.s
+
+# target to generate assembly for a file
+src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.s
+.PHONY : src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.s
+
+src/ListaCircularDoblementeEnlazada/NodoLista.o: src/ListaCircularDoblementeEnlazada/NodoLista.cpp.o
+.PHONY : src/ListaCircularDoblementeEnlazada/NodoLista.o
+
+# target to build an object file
+src/ListaCircularDoblementeEnlazada/NodoLista.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/NodoLista.cpp.o
+.PHONY : src/ListaCircularDoblementeEnlazada/NodoLista.cpp.o
+
+src/ListaCircularDoblementeEnlazada/NodoLista.i: src/ListaCircularDoblementeEnlazada/NodoLista.cpp.i
+.PHONY : src/ListaCircularDoblementeEnlazada/NodoLista.i
+
+# target to preprocess a source file
+src/ListaCircularDoblementeEnlazada/NodoLista.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/NodoLista.cpp.i
+.PHONY : src/ListaCircularDoblementeEnlazada/NodoLista.cpp.i
+
+src/ListaCircularDoblementeEnlazada/NodoLista.s: src/ListaCircularDoblementeEnlazada/NodoLista.cpp.s
+.PHONY : src/ListaCircularDoblementeEnlazada/NodoLista.s
+
+# target to generate assembly for a file
+src/ListaCircularDoblementeEnlazada/NodoLista.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/NodoLista.cpp.s
+.PHONY : src/ListaCircularDoblementeEnlazada/NodoLista.cpp.s
+
 src/MatrizDispersa/MatrizDispersa.o: src/MatrizDispersa/MatrizDispersa.cpp.o
 .PHONY : src/MatrizDispersa/MatrizDispersa.o
 
@@ -201,6 +249,126 @@ src/MatrizDispersa/Nodo.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/Nodo.cpp.s
 .PHONY : src/MatrizDispersa/Nodo.cpp.s
 
+src/models/Activo.o: src/models/Activo.cpp.o
+.PHONY : src/models/Activo.o
+
+# target to build an object file
+src/models/Activo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.o
+.PHONY : src/models/Activo.cpp.o
+
+src/models/Activo.i: src/models/Activo.cpp.i
+.PHONY : src/models/Activo.i
+
+# target to preprocess a source file
+src/models/Activo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.i
+.PHONY : src/models/Activo.cpp.i
+
+src/models/Activo.s: src/models/Activo.cpp.s
+.PHONY : src/models/Activo.s
+
+# target to generate assembly for a file
+src/models/Activo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.s
+.PHONY : src/models/Activo.cpp.s
+
+src/models/Transaccion.o: src/models/Transaccion.cpp.o
+.PHONY : src/models/Transaccion.o
+
+# target to build an object file
+src/models/Transaccion.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Transaccion.cpp.o
+.PHONY : src/models/Transaccion.cpp.o
+
+src/models/Transaccion.i: src/models/Transaccion.cpp.i
+.PHONY : src/models/Transaccion.i
+
+# target to preprocess a source file
+src/models/Transaccion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Transaccion.cpp.i
+.PHONY : src/models/Transaccion.cpp.i
+
+src/models/Transaccion.s: src/models/Transaccion.cpp.s
+.PHONY : src/models/Transaccion.s
+
+# target to generate assembly for a file
+src/models/Transaccion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Transaccion.cpp.s
+.PHONY : src/models/Transaccion.cpp.s
+
+src/models/Usuario.o: src/models/Usuario.cpp.o
+.PHONY : src/models/Usuario.o
+
+# target to build an object file
+src/models/Usuario.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Usuario.cpp.o
+.PHONY : src/models/Usuario.cpp.o
+
+src/models/Usuario.i: src/models/Usuario.cpp.i
+.PHONY : src/models/Usuario.i
+
+# target to preprocess a source file
+src/models/Usuario.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Usuario.cpp.i
+.PHONY : src/models/Usuario.cpp.i
+
+src/models/Usuario.s: src/models/Usuario.cpp.s
+.PHONY : src/models/Usuario.s
+
+# target to generate assembly for a file
+src/models/Usuario.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Usuario.cpp.s
+.PHONY : src/models/Usuario.cpp.s
+
+src/utils/Menus.o: src/utils/Menus.cpp.o
+.PHONY : src/utils/Menus.o
+
+# target to build an object file
+src/utils/Menus.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.o
+.PHONY : src/utils/Menus.cpp.o
+
+src/utils/Menus.i: src/utils/Menus.cpp.i
+.PHONY : src/utils/Menus.i
+
+# target to preprocess a source file
+src/utils/Menus.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.i
+.PHONY : src/utils/Menus.cpp.i
+
+src/utils/Menus.s: src/utils/Menus.cpp.s
+.PHONY : src/utils/Menus.s
+
+# target to generate assembly for a file
+src/utils/Menus.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.s
+.PHONY : src/utils/Menus.cpp.s
+
+src/utils/Utils.o: src/utils/Utils.cpp.o
+.PHONY : src/utils/Utils.o
+
+# target to build an object file
+src/utils/Utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Utils.cpp.o
+.PHONY : src/utils/Utils.cpp.o
+
+src/utils/Utils.i: src/utils/Utils.cpp.i
+.PHONY : src/utils/Utils.i
+
+# target to preprocess a source file
+src/utils/Utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Utils.cpp.i
+.PHONY : src/utils/Utils.cpp.i
+
+src/utils/Utils.s: src/utils/Utils.cpp.s
+.PHONY : src/utils/Utils.s
+
+# target to generate assembly for a file
+src/utils/Utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Utils.cpp.s
+.PHONY : src/utils/Utils.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -213,12 +381,33 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/ListaCircularDoblementeEnlazada/ListaTransacciones.o"
+	@echo "... src/ListaCircularDoblementeEnlazada/ListaTransacciones.i"
+	@echo "... src/ListaCircularDoblementeEnlazada/ListaTransacciones.s"
+	@echo "... src/ListaCircularDoblementeEnlazada/NodoLista.o"
+	@echo "... src/ListaCircularDoblementeEnlazada/NodoLista.i"
+	@echo "... src/ListaCircularDoblementeEnlazada/NodoLista.s"
 	@echo "... src/MatrizDispersa/MatrizDispersa.o"
 	@echo "... src/MatrizDispersa/MatrizDispersa.i"
 	@echo "... src/MatrizDispersa/MatrizDispersa.s"
 	@echo "... src/MatrizDispersa/Nodo.o"
 	@echo "... src/MatrizDispersa/Nodo.i"
 	@echo "... src/MatrizDispersa/Nodo.s"
+	@echo "... src/models/Activo.o"
+	@echo "... src/models/Activo.i"
+	@echo "... src/models/Activo.s"
+	@echo "... src/models/Transaccion.o"
+	@echo "... src/models/Transaccion.i"
+	@echo "... src/models/Transaccion.s"
+	@echo "... src/models/Usuario.o"
+	@echo "... src/models/Usuario.i"
+	@echo "... src/models/Usuario.s"
+	@echo "... src/utils/Menus.o"
+	@echo "... src/utils/Menus.i"
+	@echo "... src/utils/Menus.s"
+	@echo "... src/utils/Utils.o"
+	@echo "... src/utils/Utils.i"
+	@echo "... src/utils/Utils.s"
 .PHONY : help
 
 

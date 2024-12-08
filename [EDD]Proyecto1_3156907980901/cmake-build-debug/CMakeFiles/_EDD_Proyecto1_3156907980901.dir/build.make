@@ -111,11 +111,116 @@ CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/MatrizDispersa.cp
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/MatrizDispersa.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/MatrizDispersa/MatrizDispersa.cpp" -o CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/MatrizDispersa.cpp.s
 
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.o: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/flags.make
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.o: /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/models/Activo.cpp
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.o: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.o -MF CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.o.d -o CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.o -c "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/models/Activo.cpp"
+
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/models/Activo.cpp" > CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.i
+
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/models/Activo.cpp" -o CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.s
+
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Usuario.cpp.o: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/flags.make
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Usuario.cpp.o: /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/models/Usuario.cpp
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Usuario.cpp.o: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Usuario.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Usuario.cpp.o -MF CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Usuario.cpp.o.d -o CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Usuario.cpp.o -c "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/models/Usuario.cpp"
+
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Usuario.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Usuario.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/models/Usuario.cpp" > CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Usuario.cpp.i
+
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Usuario.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Usuario.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/models/Usuario.cpp" -o CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Usuario.cpp.s
+
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.o: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/flags.make
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.o: /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/Menus.cpp
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.o: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.o -MF CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.o.d -o CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.o -c "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/Menus.cpp"
+
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/Menus.cpp" > CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.i
+
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/Menus.cpp" -o CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.s
+
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Utils.cpp.o: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/flags.make
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Utils.cpp.o: /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/Utils.cpp
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Utils.cpp.o: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Utils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Utils.cpp.o -MF CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Utils.cpp.o.d -o CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Utils.cpp.o -c "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/Utils.cpp"
+
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Utils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/Utils.cpp" > CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Utils.cpp.i
+
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Utils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/Utils.cpp" -o CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Utils.cpp.s
+
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.o: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/flags.make
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.o: /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.o: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.o -MF CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.o.d -o CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.o -c "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp"
+
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp" > CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.i
+
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp" -o CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.s
+
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/NodoLista.cpp.o: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/flags.make
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/NodoLista.cpp.o: /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/ListaCircularDoblementeEnlazada/NodoLista.cpp
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/NodoLista.cpp.o: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/NodoLista.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/NodoLista.cpp.o -MF CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/NodoLista.cpp.o.d -o CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/NodoLista.cpp.o -c "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/ListaCircularDoblementeEnlazada/NodoLista.cpp"
+
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/NodoLista.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/NodoLista.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/ListaCircularDoblementeEnlazada/NodoLista.cpp" > CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/NodoLista.cpp.i
+
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/NodoLista.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/NodoLista.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/ListaCircularDoblementeEnlazada/NodoLista.cpp" -o CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/NodoLista.cpp.s
+
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Transaccion.cpp.o: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/flags.make
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Transaccion.cpp.o: /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/models/Transaccion.cpp
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Transaccion.cpp.o: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Transaccion.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Transaccion.cpp.o -MF CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Transaccion.cpp.o.d -o CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Transaccion.cpp.o -c "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/models/Transaccion.cpp"
+
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Transaccion.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Transaccion.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/models/Transaccion.cpp" > CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Transaccion.cpp.i
+
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Transaccion.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Transaccion.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/models/Transaccion.cpp" -o CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Transaccion.cpp.s
+
 # Object files for target _EDD_Proyecto1_3156907980901
 _EDD_Proyecto1_3156907980901_OBJECTS = \
 "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/main.cpp.o" \
 "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/Nodo.cpp.o" \
-"CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/MatrizDispersa.cpp.o"
+"CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/MatrizDispersa.cpp.o" \
+"CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.o" \
+"CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Usuario.cpp.o" \
+"CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.o" \
+"CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Utils.cpp.o" \
+"CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.o" \
+"CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/NodoLista.cpp.o" \
+"CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Transaccion.cpp.o"
 
 # External object files for target _EDD_Proyecto1_3156907980901
 _EDD_Proyecto1_3156907980901_EXTERNAL_OBJECTS =
@@ -123,9 +228,16 @@ _EDD_Proyecto1_3156907980901_EXTERNAL_OBJECTS =
 _EDD_Proyecto1_3156907980901: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/main.cpp.o
 _EDD_Proyecto1_3156907980901: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/Nodo.cpp.o
 _EDD_Proyecto1_3156907980901: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/MatrizDispersa.cpp.o
+_EDD_Proyecto1_3156907980901: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.o
+_EDD_Proyecto1_3156907980901: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Usuario.cpp.o
+_EDD_Proyecto1_3156907980901: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.o
+_EDD_Proyecto1_3156907980901: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Utils.cpp.o
+_EDD_Proyecto1_3156907980901: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.o
+_EDD_Proyecto1_3156907980901: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/NodoLista.cpp.o
+_EDD_Proyecto1_3156907980901: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Transaccion.cpp.o
 _EDD_Proyecto1_3156907980901: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make
 _EDD_Proyecto1_3156907980901: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable _EDD_Proyecto1_3156907980901"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable _EDD_Proyecto1_3156907980901"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/_EDD_Proyecto1_3156907980901.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
