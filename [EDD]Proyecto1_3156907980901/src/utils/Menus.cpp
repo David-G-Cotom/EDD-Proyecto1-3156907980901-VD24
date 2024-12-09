@@ -3,12 +3,18 @@
 //
 
 #include "../../includes/utils/Menus.h"
+
+#include "../../includes/ListaCircularDoblementeEnlazada/ListaTransacciones.h"
+#include "../../includes/ListaCircularDoblementeEnlazada/ReporteLista.h"
 #include "../../includes/MatrizDispersa/MatrizDispersa.h"
 
 const std::string USERNAME_ADMIN = "admin";
 const std::string PASSWORD_ADMIN = "admin";
 
 MatrizDispersa *matrizDispersa = new MatrizDispersa();
+
+ListaTransacciones *listaTransacciones = new ListaTransacciones();
+ReporteLista *reporteLista = new ReporteLista(listaTransacciones);
 
 void Menus::menuPrincipal() {
     char opcionElegida;
@@ -120,9 +126,8 @@ void Menus::menuAdministrador() {
             }
             case '5': {
                 std::cout << "%%%%%%%%%%%%%%%%%%%% Reporte Transacciones %%%%%%%%%%%%%%%%%%%%" <<std::endl;
-
-                //Crear el Reporte
-
+                reporteLista->reporteTransacciones();
+                std::cout << "Reporte Generado!!!" <<std::endl;
                 break;
             }
             case '6': {
@@ -134,16 +139,37 @@ void Menus::menuAdministrador() {
                 std::cout << "... Ingresar UserName del Usuario...:" <<std::endl;
                 std::string userName;
                 std::cin >> userName;
-
-                //Generar Reporte
-
+                reporteLista->reporteActivosRentadosUsuario(userName);
+                std::cout << "Reportee Generado!!!" <<std::endl;
                 break;
             }
             case '8': {
-                std::cout << "%%%%%%%%%%%%%%%%%%%% Ordenar Transacciones %%%%%%%%%%%%%%%%%%%%" <<std::endl;
-
-                //Hacer Ordenamiento
-
+                char opcion;
+                do {
+                    std::cout << "%%%%%%%%%%%%%%%%%%%% Ordenar Transacciones %%%%%%%%%%%%%%%%%%%%" <<std::endl;
+                    std::cout << "%% 1. Ordenar Ascendentemente" <<std::endl;
+                    std::cout << "%% 2. Ordenar Descendentemente" <<std::endl;
+                    std::cout << "%% 3. Cancelar" <<std::endl;
+                    std::cout << "Opcion: ";
+                    std::cin >> opcion;
+                    switch (opcion) {
+                        case '1': {
+                            listaTransacciones->setOrdenListaAscendente(true);
+                            std::cout << "Orden Ascendente Establecido!!!" <<std::endl;
+                        }
+                        case '2': {
+                            listaTransacciones->setOrdenListaAscendente(false);
+                            std::cout << "Orden Descendente Establecido!!!" <<std::endl;
+                        }
+                        case '3': {
+                            std::cout << "Ordenamiento Cancelado" <<std::endl;
+                        }
+                        default: {
+                            std::cout << "Opcion ingresada invalida. Intente otra vez" << std::endl;
+                            break;
+                        }
+                    }
+                } while (opcion != '3');
                 break;
             }
             case '9': {
@@ -379,8 +405,5 @@ void Menus::activosRentados(NodoMatriz *usuarioLogeado) {
         }
     } while (!opcionValida);
 }
-
-
-
 
 

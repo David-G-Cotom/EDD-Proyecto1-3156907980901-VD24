@@ -16,8 +16,19 @@ private:
     NodoLista *inicio;
     NodoLista *fin;
 
+    bool ordenListaAscendente;
+
 public:
     ListaTransacciones();
+
+    NodoLista *getInicio();
+    void setInicio(NodoLista *inicio);
+
+    NodoLista *getFin();
+    void setFin(NodoLista *fin);
+
+    bool getOrdenListaAscendente();
+    void setOrdenListaAscendente(bool ordenListaAscendente);
 
     void insertarTransaccion(Transaccion *transaccion);
     void insertarEnInicio(NodoLista *nodo);

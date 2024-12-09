@@ -21,4 +21,6 @@ add_executable(_EDD_Proyecto1_3156907980901 main.cpp
         includes/ListaCircularDoblementeEnlazada/NodoLista.h
         src/ListaCircularDoblementeEnlazada/NodoLista.cpp
         includes/models/Transaccion.h
-        src/models/Transaccion.cpp)
+        src/models/Transaccion.cpp
+        includes/ListaCircularDoblementeEnlazada/ReporteLista.h
+        src/ListaCircularDoblementeEnlazada/ReporteLista.cpp)

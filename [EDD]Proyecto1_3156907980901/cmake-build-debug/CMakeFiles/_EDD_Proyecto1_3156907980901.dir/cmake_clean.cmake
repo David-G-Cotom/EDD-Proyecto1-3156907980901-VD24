@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ListaTransacciones.cpp.o.d"
   "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/NodoLista.cpp.o"
   "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/NodoLista.cpp.o.d"
+  "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ReporteLista.cpp.o"
+  "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ReporteLista.cpp.o.d"
   "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/MatrizDispersa.cpp.o"
   "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/MatrizDispersa.cpp.o.d"
   "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/NodoMatriz.cpp.o"

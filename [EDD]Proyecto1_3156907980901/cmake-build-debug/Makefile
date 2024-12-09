@@ -201,6 +201,30 @@ src/ListaCircularDoblementeEnlazada/NodoLista.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/NodoLista.cpp.s
 .PHONY : src/ListaCircularDoblementeEnlazada/NodoLista.cpp.s
 
+src/ListaCircularDoblementeEnlazada/ReporteLista.o: src/ListaCircularDoblementeEnlazada/ReporteLista.cpp.o
+.PHONY : src/ListaCircularDoblementeEnlazada/ReporteLista.o
+
+# target to build an object file
+src/ListaCircularDoblementeEnlazada/ReporteLista.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ReporteLista.cpp.o
+.PHONY : src/ListaCircularDoblementeEnlazada/ReporteLista.cpp.o
+
+src/ListaCircularDoblementeEnlazada/ReporteLista.i: src/ListaCircularDoblementeEnlazada/ReporteLista.cpp.i
+.PHONY : src/ListaCircularDoblementeEnlazada/ReporteLista.i
+
+# target to preprocess a source file
+src/ListaCircularDoblementeEnlazada/ReporteLista.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ReporteLista.cpp.i
+.PHONY : src/ListaCircularDoblementeEnlazada/ReporteLista.cpp.i
+
+src/ListaCircularDoblementeEnlazada/ReporteLista.s: src/ListaCircularDoblementeEnlazada/ReporteLista.cpp.s
+.PHONY : src/ListaCircularDoblementeEnlazada/ReporteLista.s
+
+# target to generate assembly for a file
+src/ListaCircularDoblementeEnlazada/ReporteLista.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/ListaCircularDoblementeEnlazada/ReporteLista.cpp.s
+.PHONY : src/ListaCircularDoblementeEnlazada/ReporteLista.cpp.s
+
 src/MatrizDispersa/MatrizDispersa.o: src/MatrizDispersa/MatrizDispersa.cpp.o
 .PHONY : src/MatrizDispersa/MatrizDispersa.o
 
@@ -387,6 +411,9 @@ help:
 	@echo "... src/ListaCircularDoblementeEnlazada/NodoLista.o"
 	@echo "... src/ListaCircularDoblementeEnlazada/NodoLista.i"
 	@echo "... src/ListaCircularDoblementeEnlazada/NodoLista.s"
+	@echo "... src/ListaCircularDoblementeEnlazada/ReporteLista.o"
+	@echo "... src/ListaCircularDoblementeEnlazada/ReporteLista.i"
+	@echo "... src/ListaCircularDoblementeEnlazada/ReporteLista.s"
 	@echo "... src/MatrizDispersa/MatrizDispersa.o"
 	@echo "... src/MatrizDispersa/MatrizDispersa.i"
 	@echo "... src/MatrizDispersa/MatrizDispersa.s"

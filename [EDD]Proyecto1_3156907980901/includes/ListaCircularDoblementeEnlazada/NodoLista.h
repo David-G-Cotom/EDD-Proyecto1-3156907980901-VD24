@@ -24,8 +24,6 @@ public:
     Transaccion *getTransaccion();
     void setTransaccion(Transaccion *transaccion);
 
-    void insertarAlFinal(Transaccion *transaccion);
-
 };
 
 
