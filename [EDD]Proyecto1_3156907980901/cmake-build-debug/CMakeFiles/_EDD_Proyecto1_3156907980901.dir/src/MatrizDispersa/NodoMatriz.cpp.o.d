@@ -1,7 +1,6 @@
-CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/MatrizDispersa.cpp.o: \
- /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/MatrizDispersa/MatrizDispersa.cpp \
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/NodoMatriz.cpp.o: \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/MatrizDispersa/NodoMatriz.cpp \
  /usr/include/stdc-predef.h \
- /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/MatrizDispersa/../../includes/MatrizDispersa/MatrizDispersa.h \
  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/MatrizDispersa/../../includes/MatrizDispersa/NodoMatriz.h \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \

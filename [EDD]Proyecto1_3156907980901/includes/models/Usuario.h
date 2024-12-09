@@ -17,12 +17,12 @@ private:
 public:
     Usuario(std::string nombre, std::string username, std::string password);
 
-    std::string get_nombre();
-    void set_nombre(std::string nombre);
-    std::string get_username();
-    void set_username(std::string username);
-    std::string get_password();
-    void set_password(std::string password);
+    std::string getNombre();
+    void setNombre(std::string nombre);
+    std::string getUsername();
+    void setUsername(std::string username);
+    std::string getPassword();
+    void setPassword(std::string password);
 
 };
 

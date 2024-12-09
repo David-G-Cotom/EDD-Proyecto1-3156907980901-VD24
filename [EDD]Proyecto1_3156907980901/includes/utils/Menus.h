@@ -5,15 +5,25 @@
 #ifndef MENUS_H
 #define MENUS_H
 #include <string>
+#include <iostream>
+
+#include "../MatrizDispersa/NodoMatriz.h"
 
 
 class Menus {
 
 public:
     void menuPrincipal();
-    void login(bool isAdmin);
+    void login();
+
     void menuAdministrador();
-    void menuUsuario(std::string nombreUsuario);
+    void registroUsuario();
+    void reporteActivosUsuario();
+
+    void menuUsuario(NodoMatriz *usuarioLogeado);
+    void modificarActivo();
+    void rentaActivo(NodoMatriz *usuarioLogeado);
+    void activosRentados(NodoMatriz *usuarioLogeado);
 
 };
 

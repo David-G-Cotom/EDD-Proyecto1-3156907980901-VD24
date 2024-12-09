@@ -5,36 +5,38 @@
 #ifndef MATRIZDISPERSA_H
 #define MATRIZDISPERSA_H
 
-#include "Nodo.h"
+#include "NodoMatriz.h"
 
 class MatrizDispersa {
 
 private:
-    Nodo *cabeceraHorizontal;
-    Nodo *cabeceraVertical;
+    NodoMatriz *cabeceraHorizontal;
+    NodoMatriz *cabeceraVertical;
 
 public:
     MatrizDispersa();
 
     bool isVacia();
 
-    Nodo *existCabeceraHorizontal(std::string nombreCabecera);
-    Nodo *existCabeceraVertical(std::string valor);
+    NodoMatriz *existCabeceraHorizontal(std::string nombreCabecera);
+    NodoMatriz *existCabeceraVertical(std::string valor);
 
-    void insretarUsuario(std::string usuario, std::string cabeceraHorizontal, std::string cabeceraVertical);
+    void insretarUsuario(Usuario *usuario, std::string cabeceraHorizontal, std::string cabeceraVertical);
 
-    Nodo *insertarCabeceraHorizontal(std::string nombreCabecera);
-    Nodo *insertarCabeceraVertical(std::string nombreCabecera);
+    NodoMatriz *insertarCabeceraHorizontal(std::string nombreCabecera);
+    NodoMatriz *insertarCabeceraVertical(std::string nombreCabecera);
 
-    void insertarUsuarioFinal(std::string usuario, Nodo *cabeceraHorizontal, Nodo *cabeceraVertical);
+    void insertarUsuarioFinal(Usuario *usuario, NodoMatriz *cabeceraHorizontal, NodoMatriz *cabeceraVertical);
 
-    void insertarUsuarioFinalHorizontal(std::string usuario, Nodo *cabeceraHorizontal);
-    void insertarMedioUsuarioVertical(std::string usuario, Nodo *cabeceraVertical);
-    void insertarUsuarioFinalVertical(std::string usuario, Nodo *cabeceraVertical);
-    void insertarMedioUsuarioHorizontal(std::string usuario, Nodo *cabeceraHorizontal);
+    void insertarUsuarioFinalHorizontal(std::string usuario, NodoMatriz *cabeceraHorizontal);
+    void insertarMedioUsuarioVertical(std::string usuario, NodoMatriz *cabeceraVertical);
+    void insertarUsuarioFinalVertical(std::string usuario, NodoMatriz *cabeceraVertical);
+    void insertarMedioUsuarioHorizontal(std::string usuario, NodoMatriz *cabeceraHorizontal);
 
-    Nodo *buscarCabeceraHorizontal(Nodo *nodoActual);
-    Nodo *buscarCabeceraVertical(Nodo *nodoActual);
+    NodoMatriz *buscarCabeceraHorizontal(NodoMatriz *nodoActual);
+    NodoMatriz *buscarCabeceraVertical(NodoMatriz *nodoActual);
+
+    NodoMatriz *existeNodoInterseccion(std::string departamento, std::string empresa);
 
 };
 

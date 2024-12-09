@@ -1,8 +1,7 @@
-CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/MatrizDispersa.cpp.o: \
- /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/MatrizDispersa/MatrizDispersa.cpp \
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.o: \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/models/Activo.cpp \
  /usr/include/stdc-predef.h \
- /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/MatrizDispersa/../../includes/MatrizDispersa/MatrizDispersa.h \
- /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/MatrizDispersa/../../includes/MatrizDispersa/NodoMatriz.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/models/../../includes/models/Activo.h \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -122,5 +121,4 @@ CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/MatrizDispersa.cp
  /usr/include/c++/13/bits/memory_resource.h /usr/include/c++/13/cstddef \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
- /usr/include/c++/13/bits/ranges_util.h \
- /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/MatrizDispersa/../../includes/MatrizDispersa/../models/Usuario.h
+ /usr/include/c++/13/bits/ranges_util.h

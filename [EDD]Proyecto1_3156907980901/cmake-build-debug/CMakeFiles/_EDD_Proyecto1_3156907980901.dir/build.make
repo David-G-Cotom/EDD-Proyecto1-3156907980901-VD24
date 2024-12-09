@@ -83,19 +83,19 @@ CMakeFiles/_EDD_Proyecto1_3156907980901.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/_EDD_Proyecto1_3156907980901.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/main.cpp" -o CMakeFiles/_EDD_Proyecto1_3156907980901.dir/main.cpp.s
 
-CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/Nodo.cpp.o: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/flags.make
-CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/Nodo.cpp.o: /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/MatrizDispersa/Nodo.cpp
-CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/Nodo.cpp.o: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/Nodo.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/Nodo.cpp.o -MF CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/Nodo.cpp.o.d -o CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/Nodo.cpp.o -c "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/MatrizDispersa/Nodo.cpp"
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/NodoMatriz.cpp.o: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/flags.make
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/NodoMatriz.cpp.o: /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/MatrizDispersa/NodoMatriz.cpp
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/NodoMatriz.cpp.o: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/NodoMatriz.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/NodoMatriz.cpp.o -MF CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/NodoMatriz.cpp.o.d -o CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/NodoMatriz.cpp.o -c "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/MatrizDispersa/NodoMatriz.cpp"
 
-CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/Nodo.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/Nodo.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/MatrizDispersa/Nodo.cpp" > CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/Nodo.cpp.i
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/NodoMatriz.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/NodoMatriz.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/MatrizDispersa/NodoMatriz.cpp" > CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/NodoMatriz.cpp.i
 
-CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/Nodo.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/Nodo.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/MatrizDispersa/Nodo.cpp" -o CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/Nodo.cpp.s
+CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/NodoMatriz.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/NodoMatriz.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/MatrizDispersa/NodoMatriz.cpp" -o CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/NodoMatriz.cpp.s
 
 CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/MatrizDispersa.cpp.o: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/flags.make
 CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/MatrizDispersa.cpp.o: /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/MatrizDispersa/MatrizDispersa.cpp
@@ -212,7 +212,7 @@ CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Transaccion.cpp.s: cmake_
 # Object files for target _EDD_Proyecto1_3156907980901
 _EDD_Proyecto1_3156907980901_OBJECTS = \
 "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/main.cpp.o" \
-"CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/Nodo.cpp.o" \
+"CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/NodoMatriz.cpp.o" \
 "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/MatrizDispersa.cpp.o" \
 "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.o" \
 "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Usuario.cpp.o" \
@@ -226,7 +226,7 @@ _EDD_Proyecto1_3156907980901_OBJECTS = \
 _EDD_Proyecto1_3156907980901_EXTERNAL_OBJECTS =
 
 _EDD_Proyecto1_3156907980901: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/main.cpp.o
-_EDD_Proyecto1_3156907980901: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/Nodo.cpp.o
+_EDD_Proyecto1_3156907980901: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/NodoMatriz.cpp.o
 _EDD_Proyecto1_3156907980901: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/MatrizDispersa.cpp.o
 _EDD_Proyecto1_3156907980901: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.o
 _EDD_Proyecto1_3156907980901: CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Usuario.cpp.o

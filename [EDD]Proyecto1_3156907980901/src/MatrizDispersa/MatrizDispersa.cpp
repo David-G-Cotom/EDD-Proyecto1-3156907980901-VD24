@@ -13,33 +13,35 @@ bool MatrizDispersa::isVacia() {
     return (this->cabeceraHorizontal == nullptr) || (this->cabeceraVertical == nullptr);
 }
 
-Nodo *MatrizDispersa::existCabeceraHorizontal(std::string nombreCabecera) {
+NodoMatriz *MatrizDispersa::existCabeceraHorizontal(std::string nombreCabecera) {
     if (isVacia()) return nullptr;
 
-    Nodo *aux = this->cabeceraHorizontal;
+    NodoMatriz *aux = this->cabeceraHorizontal;
     while (aux != nullptr) {
 
         if (aux->getNombreCabecera() == nombreCabecera) return aux;
 
         aux = aux->getSiguiente();
     }
+    return nullptr;
 }
 
-Nodo *MatrizDispersa::existCabeceraVertical(std::string nombreCabecera) {
+NodoMatriz *MatrizDispersa::existCabeceraVertical(std::string nombreCabecera) {
     if (isVacia()) return nullptr;
 
-    Nodo *aux = this->cabeceraVertical;
+    NodoMatriz *aux = this->cabeceraVertical;
     while (aux != nullptr) {
 
         if (aux->getNombreCabecera() == nombreCabecera) return aux;
 
         aux = aux->getAbajo();
     }
+    return nullptr;
 }
 
-void MatrizDispersa::insretarUsuario(std::string usuario, std::string cabeceraHorizontal, std::string cabeceraVertical) {
-    Nodo *cabeceraHorizontalActual = nullptr;
-    Nodo *cabeceraVerticalActual = nullptr;
+void MatrizDispersa::insretarUsuario(Usuario *usuario, std::string cabeceraHorizontal, std::string cabeceraVertical) {
+    NodoMatriz *cabeceraHorizontalActual = nullptr;
+    NodoMatriz *cabeceraVerticalActual = nullptr;
 
     if (isVacia()) {
         cabeceraHorizontalActual = insertarCabeceraHorizontal(cabeceraHorizontal);
@@ -72,13 +74,13 @@ void MatrizDispersa::insretarUsuario(std::string usuario, std::string cabeceraHo
 
 }
 
-Nodo *MatrizDispersa::insertarCabeceraHorizontal(std::string nombreCabecera) {
-    Nodo *nuevaCabecera = new Nodo(nombreCabecera);
+NodoMatriz *MatrizDispersa::insertarCabeceraHorizontal(std::string nombreCabecera) {
+    auto *nuevaCabecera = new NodoMatriz(nombreCabecera);
     if (this->cabeceraHorizontal == nullptr) {
         this->cabeceraHorizontal = nuevaCabecera;
         return nuevaCabecera;
     }
-    Nodo *aux = this->cabeceraHorizontal;
+    NodoMatriz *aux = this->cabeceraHorizontal;
 
     while (aux->getSiguiente() != nullptr) aux = aux->getSiguiente();
 
@@ -87,13 +89,13 @@ Nodo *MatrizDispersa::insertarCabeceraHorizontal(std::string nombreCabecera) {
     return nuevaCabecera;
 }
 
-Nodo *MatrizDispersa::insertarCabeceraVertical(std::string nombreCabecera) {
-    Nodo *nuevaCabecera = new Nodo(nombreCabecera);
+NodoMatriz *MatrizDispersa::insertarCabeceraVertical(std::string nombreCabecera) {
+    auto *nuevaCabecera = new NodoMatriz(nombreCabecera);
     if (this->cabeceraVertical == nullptr) {
         this->cabeceraVertical = nuevaCabecera;
         return nuevaCabecera;
     }
-    Nodo *aux = this->cabeceraVertical;
+    NodoMatriz *aux = this->cabeceraVertical;
 
     while (aux->getAbajo() != nullptr) aux = aux->getAbajo();
 
@@ -102,10 +104,10 @@ Nodo *MatrizDispersa::insertarCabeceraVertical(std::string nombreCabecera) {
     return nuevaCabecera;
 }
 
-void MatrizDispersa::insertarUsuarioFinal(std::string usuario, Nodo *cabeceraHorizontal, Nodo *cabeceraVertical) {
-    Nodo *usuarioNuevo = new Nodo(usuario);
-    Nodo *auxCabeceraHorizontal = cabeceraHorizontal;
-    Nodo *auxCabeceraVertical = cabeceraVertical;
+void MatrizDispersa::insertarUsuarioFinal(Usuario *usuario, NodoMatriz *cabeceraHorizontal, NodoMatriz *cabeceraVertical) {
+    auto *usuarioNuevo = new NodoMatriz(usuario);
+    NodoMatriz *auxCabeceraHorizontal = cabeceraHorizontal;
+    NodoMatriz *auxCabeceraVertical = cabeceraVertical;
 
     while (auxCabeceraHorizontal->getAbajo() != nullptr) auxCabeceraHorizontal = auxCabeceraHorizontal->getAbajo();
 
@@ -118,46 +120,52 @@ void MatrizDispersa::insertarUsuarioFinal(std::string usuario, Nodo *cabeceraHor
     usuarioNuevo->setPrevio(auxCabeceraVertical);
 }
 
-void MatrizDispersa::insertarUsuarioFinalHorizontal(std::string usuario, Nodo *cabeceraHorizontal) {
+void MatrizDispersa::insertarUsuarioFinalHorizontal(std::string usuario, NodoMatriz *cabeceraHorizontal) {
 
 }
 
-void MatrizDispersa::insertarMedioUsuarioVertical(std::string usuario, Nodo *cabeceraVertical) {
+void MatrizDispersa::insertarMedioUsuarioVertical(std::string usuario, NodoMatriz *cabeceraVertical) {
 
 }
 
-void MatrizDispersa::insertarUsuarioFinalVertical(std::string usuario, Nodo *cabeceraVertical) {
+void MatrizDispersa::insertarUsuarioFinalVertical(std::string usuario, NodoMatriz *cabeceraVertical) {
 
 }
 
-void MatrizDispersa::insertarMedioUsuarioHorizontal(std::string usuario, Nodo *cabeceraHorizontal) {
+void MatrizDispersa::insertarMedioUsuarioHorizontal(std::string usuario, NodoMatriz *cabeceraHorizontal) {
 
 }
 
-Nodo *MatrizDispersa::buscarCabeceraHorizontal(Nodo *nodoActual) {
-    Nodo *aux = nodoActual;
+NodoMatriz *MatrizDispersa::buscarCabeceraHorizontal(NodoMatriz *nodoActual) {
+    NodoMatriz *aux = nodoActual;
 
     while (aux->getArriba() != nullptr) aux = aux->getArriba();
 
     return aux;
 }
 
-Nodo *MatrizDispersa::buscarCabeceraVertical(Nodo *nodoActual) {
-    Nodo *aux = nodoActual;
+NodoMatriz *MatrizDispersa::buscarCabeceraVertical(NodoMatriz *nodoActual) {
+    NodoMatriz *aux = nodoActual;
 
     while (aux->getPrevio() != nullptr) aux = aux->getPrevio();
 
     return aux;
 }
 
+NodoMatriz *MatrizDispersa::existeNodoInterseccion(std::string departamento, std::string empresa) {
+    NodoMatriz *nodoDepartamento = this->existCabeceraHorizontal(departamento);
+    NodoMatriz *nodoEmpresa = this->existCabeceraVertical(empresa);
 
+    if (nodoDepartamento == nullptr || nodoEmpresa == nullptr) return nullptr;
 
+    NodoMatriz *aux = nodoDepartamento->getAbajo();
+    while (aux != nullptr) {
 
+        if (nodoEmpresa->getNombreCabecera() == buscarCabeceraVertical(aux)->getNombreCabecera()) return aux;
 
-
-
-
-
-
+        aux = aux->getAbajo();
+    }
+    return nullptr;
+}
 
 

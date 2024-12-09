@@ -10,27 +10,27 @@ Usuario::Usuario(std::string nombre, std::string username, std::string password)
     this->password = password;
 }
 
-std::string Usuario::get_nombre() {
+std::string Usuario::getNombre() {
     return this->nombre;
 }
 
-void Usuario::set_nombre(std::string nombre) {
+void Usuario::setNombre(std::string nombre) {
     this->nombre = nombre;
 }
 
-std::string Usuario::get_username() {
+std::string Usuario::getUsername() {
     return this->username;
 }
 
-void Usuario::set_username(std::string username) {
+void Usuario::setUsername(std::string username) {
     this->username = username;
 }
 
-std::string Usuario::get_password() {
+std::string Usuario::getPassword() {
     return this->password;
 }
 
-void Usuario::set_password(std::string password) {
+void Usuario::setPassword(std::string password) {
     this->password = password;
 }
 
