@@ -15,14 +15,14 @@ private:
     std::string id;
     Activo *activo;
     std::string usuario;
-    std::string nombreDepartamento;
-    std::string nombreEmpresa;
+    std::string departamentoUsuario;
+    std::string empresaUsuario;
     std::string fecha;
     int dias;
 
 public:
     Transaccion();
-    Transaccion(Activo *activo, std::string usuario, std::string nombreDepartamento, std::string nombreEmpresa, std::string fecha, int dias);
+    Transaccion(Activo *activo, std::string usuario, std::string departamentoUsuario, std::string empresaUsuario, std::string fecha, int dias);
 
     std::string getId();
     void setId(std::string id);
@@ -30,10 +30,10 @@ public:
     void setActivo(Activo *activo);
     std::string getUsuario();
     void setUsuario(std::string usuario);
-    std::string getNombreDepartamento();
-    void setNombreDepartamento(std::string nombreDepartamento);
-    std::string getNombreEmpresa();
-    void setNombreEmpresa(std::string nombreEmpresa);
+    std::string getDepartamentoUsuario();
+    void setDepartamentoUsuario(std::string nombreDepartamento);
+    std::string getEmpresaUsuario();
+    void setEmpresaUsuario(std::string nombreEmpresa);
     std::string getFecha();
     void setFecha(std::string fecha);
     int getDias();

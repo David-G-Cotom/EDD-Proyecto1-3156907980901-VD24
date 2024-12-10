@@ -4,9 +4,13 @@
 
 #include "../../includes/models/Activo.h"
 
+#include "../../includes/utils/Utils.h"
+
 Activo::Activo(std::string nombre, std::string descripcion) {
+    this->id = Utils::generarIDAlfanumerico();
     this->nombre = nombre;
     this->descripcion = descripcion;
+    this->disponibilidad = true;
 }
 
 std::string Activo::getId() {

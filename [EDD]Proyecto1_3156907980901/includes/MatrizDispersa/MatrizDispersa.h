@@ -18,25 +18,32 @@ public:
 
     bool isVacia();
 
-    NodoMatriz *existCabeceraHorizontal(std::string nombreCabecera);
-    NodoMatriz *existCabeceraVertical(std::string valor);
+    NodoMatriz *existeDepartamento(std::string nombreCabecera);
+    NodoMatriz *existeEmpresa(std::string valor);
 
-    void insretarUsuario(Usuario *usuario, std::string cabeceraHorizontal, std::string cabeceraVertical);
+    void insretarUsuario(Usuario *usuario, std::string departamento, std::string empresa);
 
-    NodoMatriz *insertarCabeceraHorizontal(std::string nombreCabecera);
-    NodoMatriz *insertarCabeceraVertical(std::string nombreCabecera);
+    NodoMatriz *insertarDepartamento(std::string nombreCabecera);
+    NodoMatriz *insertarEmpresa(std::string nombreCabecera);
 
-    void insertarUsuarioFinal(Usuario *usuario, NodoMatriz *cabeceraHorizontal, NodoMatriz *cabeceraVertical);
+    void insertarUsuarioFinal(NodoMatriz *usuarioNuevo, NodoMatriz *cabeceraHorizontal, NodoMatriz *cabeceraVertical);
 
-    void insertarUsuarioFinalHorizontal(std::string usuario, NodoMatriz *cabeceraHorizontal);
-    void insertarMedioUsuarioVertical(std::string usuario, NodoMatriz *cabeceraVertical);
-    void insertarUsuarioFinalVertical(std::string usuario, NodoMatriz *cabeceraVertical);
-    void insertarMedioUsuarioHorizontal(std::string usuario, NodoMatriz *cabeceraHorizontal);
+    void insertarUsuarioFinalHorizontal(NodoMatriz *usuarioNuevo, NodoMatriz *cabeceraHorizontal);
+    void insertarUsuarioFinalVertical(NodoMatriz *usuarioNuevo, NodoMatriz *cabeceraVertical);
+    void insertarMedioUsuarioHorizontal(NodoMatriz *usuario, NodoMatriz *cabeceraHorizontal);
+    void insertarMedioUsuarioVertical(NodoMatriz *usuario, NodoMatriz *cabeceraVertical);
 
     NodoMatriz *buscarCabeceraHorizontal(NodoMatriz *nodoActual);
     NodoMatriz *buscarCabeceraVertical(NodoMatriz *nodoActual);
 
+    bool masAbajo(NodoMatriz *cabeceraVertical, std::string empresa);
+    bool masDerecha(NodoMatriz *cabeceraHorizontal, std::string departamento);
+
     NodoMatriz *existeNodoInterseccion(std::string departamento, std::string empresa);
+    bool existeUsuario(NodoMatriz *usuarios, std::string userName, std::string password);
+
+    void insertarUsuarioAtras(NodoMatriz *nuevoUsuario, NodoMatriz *usuarios);
+    void insertarUsuarioEnFrente(NodoMatriz *nuevoUsuario, NodoMatriz *usuarios);
 
 };
 

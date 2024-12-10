@@ -4,11 +4,14 @@
 
 #include "../../includes/models/Transaccion.h"
 
-Transaccion::Transaccion(Activo *activo, std::string usuario, std::string nombreDepartamento, std::string nombreEmpresa, std::string fecha, int dias) {
+#include "../../includes/utils/Utils.h"
+
+Transaccion::Transaccion(Activo *activo, std::string usuario, std::string departamentoUsuario, std::string empresaUsuario, std::string fecha, int dias) {
+    this->id = Utils::generarIDAlfanumerico();
     this->activo = activo;
     this->usuario = usuario;
-    this->nombreDepartamento = nombreDepartamento;
-    this->nombreEmpresa = nombreEmpresa;
+    this->departamentoUsuario = departamentoUsuario;
+    this->empresaUsuario = empresaUsuario;
     this->fecha = fecha;
     this->dias = dias;
 }
@@ -37,20 +40,20 @@ void Transaccion::setUsuario(std::string usuario) {
     this->usuario = usuario;
 }
 
-std::string Transaccion::getNombreDepartamento() {
-    return this->nombreDepartamento;
+std::string Transaccion::getDepartamentoUsuario() {
+    return this->departamentoUsuario;
 }
 
-void Transaccion::setNombreDepartamento(std::string nombreDepartamento) {
-    this->nombreDepartamento = nombreDepartamento;
+void Transaccion::setDepartamentoUsuario(std::string nombreDepartamento) {
+    this->departamentoUsuario = nombreDepartamento;
 }
 
-std::string Transaccion::getNombreEmpresa() {
-    return this->nombreEmpresa;
+std::string Transaccion::getEmpresaUsuario() {
+    return this->empresaUsuario;
 }
 
-void Transaccion::setNombreEmpresa(std::string nombreEmpresa) {
-    this->nombreEmpresa = nombreEmpresa;
+void Transaccion::setEmpresaUsuario(std::string nombreEmpresa) {
+    this->empresaUsuario = nombreEmpresa;
 }
 
 std::string Transaccion::getFecha() {

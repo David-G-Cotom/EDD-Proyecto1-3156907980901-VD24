@@ -122,4 +122,5 @@ CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Transaccion.cpp.o: \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
  /usr/include/c++/13/bits/ranges_util.h \
- /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/models/../../includes/models/Activo.h
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/models/../../includes/models/Activo.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/models/../../includes/utils/Utils.h
