@@ -7,11 +7,13 @@
 #include "../../includes/ListaCircularDoblementeEnlazada/ListaTransacciones.h"
 #include "../../includes/ListaCircularDoblementeEnlazada/ReporteLista.h"
 #include "../../includes/MatrizDispersa/MatrizDispersa.h"
+#include "../../includes/MatrizDispersa/ReporteMatriz.h"
 
 const std::string USERNAME_ADMIN = "admin";
 const std::string PASSWORD_ADMIN = "admin";
 
 MatrizDispersa *matrizDispersa = new MatrizDispersa();
+ReporteMatriz *reporteMatriz = new ReporteMatriz(matrizDispersa);
 
 ListaTransacciones *listaTransacciones = new ListaTransacciones();
 ReporteLista *reporteLista = new ReporteLista(listaTransacciones);
@@ -99,9 +101,8 @@ void Menus::menuAdministrador() {
             }
             case '2': {
                 std::cout << "%%%%%%%%%%%%%%%%%%%% Reporte Matriz Dispersa %%%%%%%%%%%%%%%%%%%%" <<std::endl;
-
-                //Crear el Reporte
-
+                reporteMatriz->reporteMatrizDispersa();
+                std::cout << "Reporte Generado!!!" << std::endl;
                 break;
             }
             case '3': {
@@ -109,9 +110,8 @@ void Menus::menuAdministrador() {
                 std::cout << "Ingrese el Departamento: " <<std::endl;
                 std::string departamento;
                 std::cin >> departamento;
-
-                //Crear Reporte
-
+                reporteMatriz->reporteActivosDepartamento(departamento);
+                std::cout << "Reporte Generado!!!" << std::endl;
                 break;
             }
             case '4': {
@@ -119,9 +119,8 @@ void Menus::menuAdministrador() {
                 std::cout << "Ingrese la Empresa: " <<std::endl;
                 std::string empresa;
                 std::cin >> empresa;
-
-                //Crear Reporte
-
+                reporteMatriz->reporteActivosEmpresa(empresa);
+                std::cout << "Reporte Generado!!!" << std::endl;
                 break;
             }
             case '5': {
@@ -202,7 +201,11 @@ void Menus::registroUsuario() {
     std::string empresa;
     std::cin >> empresa;
 
-    matrizDispersa->insretarUsuario(new Usuario("", userName, password), departamento, empresa);
+    std::cout << "... Ingresar Nombre Completo...:" <<std::endl;
+    std::string nombreCompleto;
+    std::cin >> nombreCompleto;
+
+    matrizDispersa->insretarUsuario(new Usuario(nombreCompleto, userName, password), departamento, empresa);
 }
 
 void Menus::reporteActivosUsuario() {

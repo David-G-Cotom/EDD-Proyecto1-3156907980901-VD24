@@ -10,6 +10,22 @@ MatrizDispersa::MatrizDispersa() {
     this->cabeceraVertical = nullptr;
 }
 
+NodoMatriz *MatrizDispersa::getCabeceraHorizontal() {
+    return this->cabeceraHorizontal;
+}
+
+void MatrizDispersa::setCabeceraHorizontal(NodoMatriz *nodoHorizontal) {
+    this->cabeceraHorizontal = nodoHorizontal;
+}
+
+NodoMatriz *MatrizDispersa::getCabeceraVertical() {
+    return this->cabeceraVertical;
+}
+
+void MatrizDispersa::setCabeceraVertical(NodoMatriz *nodoVertical) {
+    this->cabeceraVertical = nodoVertical;
+}
+
 bool MatrizDispersa::isVacia() {
     return (this->cabeceraHorizontal == nullptr) || (this->cabeceraVertical == nullptr);
 }
@@ -139,6 +155,8 @@ void MatrizDispersa::insretarUsuario(Usuario *usuario, std::string departamento,
 
 NodoMatriz *MatrizDispersa::insertarDepartamento(std::string nombreCabecera) {
     auto *nuevaCabecera = new NodoMatriz(nombreCabecera);
+    NodoMatriz::contadorGrupo++;
+    nuevaCabecera->setGrupo(NodoMatriz::contadorGrupo);
     if (this->cabeceraHorizontal == nullptr) {
         this->cabeceraHorizontal = nuevaCabecera;
         return nuevaCabecera;
@@ -154,6 +172,7 @@ NodoMatriz *MatrizDispersa::insertarDepartamento(std::string nombreCabecera) {
 
 NodoMatriz *MatrizDispersa::insertarEmpresa(std::string nombreCabecera) {
     auto *nuevaCabecera = new NodoMatriz(nombreCabecera);
+    nuevaCabecera->setGrupo(1);
     if (this->cabeceraVertical == nullptr) {
         this->cabeceraVertical = nuevaCabecera;
         return nuevaCabecera;
@@ -179,6 +198,7 @@ void MatrizDispersa::insertarUsuarioFinalHorizontal(NodoMatriz *usuarioNuevo, No
 
     aux->setAbajo(usuarioNuevo);
     usuarioNuevo->setArriba(aux);
+    usuarioNuevo->setGrupo(aux->getGrupo());
 }
 
 void MatrizDispersa::insertarUsuarioFinalVertical(NodoMatriz *usuarioNuevo, NodoMatriz *cabeceraVertical) {
@@ -195,6 +215,7 @@ void MatrizDispersa::insertarMedioUsuarioHorizontal(NodoMatriz *usuario, NodoMat
     usuario->setAbajo(cabeceraHorizontal);
     usuario->setArriba(cabeceraHorizontal->getArriba());
     cabeceraHorizontal->setArriba(usuario);
+    usuario->setGrupo(cabeceraHorizontal->getGrupo());
 }
 
 void MatrizDispersa::insertarMedioUsuarioVertical(NodoMatriz *usuario, NodoMatriz *cabeceraVertical) {
@@ -278,6 +299,7 @@ void MatrizDispersa::insertarUsuarioAtras(NodoMatriz *nuevoUsuario, NodoMatriz *
 
     aux->setAtras(nuevoUsuario);
     nuevoUsuario->setAdelante(aux);
+    nuevoUsuario->setGrupo(aux->getGrupo());
 }
 
 void MatrizDispersa::insertarUsuarioEnFrente(NodoMatriz *nuevoUsuario, NodoMatriz *usuarios) {
@@ -297,6 +319,8 @@ void MatrizDispersa::insertarUsuarioEnFrente(NodoMatriz *nuevoUsuario, NodoMatri
     nuevoUsuario->setArriba(usuarios->getArriba());
     usuarios->setArriba(nullptr);
     usuarios->setAbajo(nullptr);
+
+    nuevoUsuario->setGrupo(usuarios->getGrupo());
 }
 
 

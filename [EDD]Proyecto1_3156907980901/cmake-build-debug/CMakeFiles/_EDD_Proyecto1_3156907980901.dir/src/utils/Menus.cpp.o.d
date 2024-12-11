@@ -167,4 +167,6 @@ CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.o: \
  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/ListaCircularDoblementeEnlazada/ReporteLista.h \
  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/ListaCircularDoblementeEnlazada/ListaTransacciones.h \
  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/MatrizDispersa/MatrizDispersa.h \
- /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/MatrizDispersa/NodoMatriz.h
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/MatrizDispersa/NodoMatriz.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/MatrizDispersa/ReporteMatriz.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/MatrizDispersa/MatrizDispersa.h

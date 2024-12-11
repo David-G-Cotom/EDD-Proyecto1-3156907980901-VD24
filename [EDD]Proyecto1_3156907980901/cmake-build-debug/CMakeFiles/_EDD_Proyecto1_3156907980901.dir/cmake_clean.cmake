@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/MatrizDispersa.cpp.o.d"
   "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/NodoMatriz.cpp.o"
   "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/NodoMatriz.cpp.o.d"
+  "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/ReporteMatriz.cpp.o"
+  "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/ReporteMatriz.cpp.o.d"
   "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.o"
   "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Activo.cpp.o.d"
   "CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/models/Transaccion.cpp.o"

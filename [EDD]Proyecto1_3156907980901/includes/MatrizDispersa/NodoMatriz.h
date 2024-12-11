@@ -24,7 +24,13 @@ private:
     std::string nombreCabecera;
     Usuario *usuario;
 
+    int id;
+    int grupo;
+
 public:
+    static int contadorID;
+    static int contadorGrupo;
+
     NodoMatriz(std::string nombreCabecera);
     NodoMatriz(Usuario *usuario);
 
@@ -51,6 +57,12 @@ public:
 
     Usuario *getUsuario();
     void setUsuario(Usuario *usuario);
+
+    int getId();
+    void setId(int id);
+
+    int getGrupo();
+    void setGrupo(int grupo);
 
 };
 

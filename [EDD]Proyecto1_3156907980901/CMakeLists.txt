@@ -23,4 +23,6 @@ add_executable(_EDD_Proyecto1_3156907980901 main.cpp
         includes/models/Transaccion.h
         src/models/Transaccion.cpp
         includes/ListaCircularDoblementeEnlazada/ReporteLista.h
-        src/ListaCircularDoblementeEnlazada/ReporteLista.cpp)
+        src/ListaCircularDoblementeEnlazada/ReporteLista.cpp
+        includes/MatrizDispersa/ReporteMatriz.h
+        src/MatrizDispersa/ReporteMatriz.cpp)

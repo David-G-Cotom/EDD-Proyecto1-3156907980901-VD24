@@ -4,6 +4,9 @@
 
 #include "../../includes/MatrizDispersa/NodoMatriz.h"
 
+int NodoMatriz::contadorGrupo = 1;
+int NodoMatriz::contadorID = 0;
+
 NodoMatriz::NodoMatriz(std::string nombreCabecera) {
     this->siguiente = nullptr;
     this->previo = nullptr;
@@ -13,6 +16,9 @@ NodoMatriz::NodoMatriz(std::string nombreCabecera) {
     this->atras = nullptr;
     this->nombreCabecera = nombreCabecera;
     this->usuario = nullptr;
+    contadorID++;
+    this->id = contadorID;
+    this->grupo = 0;
 }
 
 NodoMatriz::NodoMatriz(Usuario *usuario) {
@@ -24,6 +30,9 @@ NodoMatriz::NodoMatriz(Usuario *usuario) {
     this->atras = nullptr;
     this->nombreCabecera = "";
     this->usuario = usuario;
+    contadorID++;
+    this->id = contadorID;
+    this->grupo = 0;
 }
 
 NodoMatriz *NodoMatriz::getSiguiente() {
@@ -89,5 +98,23 @@ Usuario *NodoMatriz::getUsuario() {
 void NodoMatriz::setUsuario(Usuario *usuario) {
     this->usuario = usuario;
 }
+
+int NodoMatriz::getId() {
+    return id;
+}
+
+void NodoMatriz::setId(int id) {
+    this->id = id;
+}
+
+int NodoMatriz::getGrupo() {
+    return grupo;
+}
+
+void NodoMatriz::setGrupo(int grupo) {
+    this->grupo = grupo;
+}
+
+
 
 

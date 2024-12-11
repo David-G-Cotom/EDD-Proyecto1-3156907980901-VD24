@@ -273,6 +273,30 @@ src/MatrizDispersa/NodoMatriz.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/NodoMatriz.cpp.s
 .PHONY : src/MatrizDispersa/NodoMatriz.cpp.s
 
+src/MatrizDispersa/ReporteMatriz.o: src/MatrizDispersa/ReporteMatriz.cpp.o
+.PHONY : src/MatrizDispersa/ReporteMatriz.o
+
+# target to build an object file
+src/MatrizDispersa/ReporteMatriz.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/ReporteMatriz.cpp.o
+.PHONY : src/MatrizDispersa/ReporteMatriz.cpp.o
+
+src/MatrizDispersa/ReporteMatriz.i: src/MatrizDispersa/ReporteMatriz.cpp.i
+.PHONY : src/MatrizDispersa/ReporteMatriz.i
+
+# target to preprocess a source file
+src/MatrizDispersa/ReporteMatriz.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/ReporteMatriz.cpp.i
+.PHONY : src/MatrizDispersa/ReporteMatriz.cpp.i
+
+src/MatrizDispersa/ReporteMatriz.s: src/MatrizDispersa/ReporteMatriz.cpp.s
+.PHONY : src/MatrizDispersa/ReporteMatriz.s
+
+# target to generate assembly for a file
+src/MatrizDispersa/ReporteMatriz.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Proyecto1_3156907980901.dir/build.make CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/MatrizDispersa/ReporteMatriz.cpp.s
+.PHONY : src/MatrizDispersa/ReporteMatriz.cpp.s
+
 src/models/Activo.o: src/models/Activo.cpp.o
 .PHONY : src/models/Activo.o
 
@@ -420,6 +444,9 @@ help:
 	@echo "... src/MatrizDispersa/NodoMatriz.o"
 	@echo "... src/MatrizDispersa/NodoMatriz.i"
 	@echo "... src/MatrizDispersa/NodoMatriz.s"
+	@echo "... src/MatrizDispersa/ReporteMatriz.o"
+	@echo "... src/MatrizDispersa/ReporteMatriz.i"
+	@echo "... src/MatrizDispersa/ReporteMatriz.s"
 	@echo "... src/models/Activo.o"
 	@echo "... src/models/Activo.i"
 	@echo "... src/models/Activo.s"

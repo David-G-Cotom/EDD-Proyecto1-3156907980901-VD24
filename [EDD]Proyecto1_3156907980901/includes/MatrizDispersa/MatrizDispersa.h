@@ -16,6 +16,11 @@ private:
 public:
     MatrizDispersa();
 
+    NodoMatriz *getCabeceraHorizontal();
+    void setCabeceraHorizontal(NodoMatriz *nodoHorizontal);
+    NodoMatriz *getCabeceraVertical();
+    void setCabeceraVertical(NodoMatriz *nodoVertical);
+
     bool isVacia();
 
     NodoMatriz *existeDepartamento(std::string nombreCabecera);

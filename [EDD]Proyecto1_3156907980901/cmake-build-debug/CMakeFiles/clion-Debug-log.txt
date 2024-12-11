@@ -1,4 +1,4 @@
 /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901" -B "/mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/cmake-build-debug"
--- Configuring done (0.0s)
--- Generating done (0.1s)
+-- Configuring done (0.1s)
+-- Generating done (0.2s)
 -- Build files have been written to: /mnt/e/Documentos Carlos Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/cmake-build-debug
