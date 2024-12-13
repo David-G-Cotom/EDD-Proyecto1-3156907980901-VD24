@@ -151,6 +151,7 @@ void MatrizDispersa::insretarUsuario(Usuario *usuario, std::string departamento,
     } else {
         insertarMedioUsuarioVertical(usuarioNuevo, auxCabeceraVertical);
     }
+    std::cout << "Nuevo Usuario Ingresado al Sistema" << std::endl;
 }
 
 NodoMatriz *MatrizDispersa::insertarDepartamento(std::string nombreCabecera) {
@@ -189,6 +190,7 @@ NodoMatriz *MatrizDispersa::insertarEmpresa(std::string nombreCabecera) {
 void MatrizDispersa::insertarUsuarioFinal(NodoMatriz *usuarioNuevo, NodoMatriz *cabeceraHorizontal, NodoMatriz *cabeceraVertical) {
     insertarUsuarioFinalHorizontal(usuarioNuevo, cabeceraHorizontal);
     insertarUsuarioFinalVertical(usuarioNuevo, cabeceraVertical);
+    std::cout << "Registro Realizado con Exito!!!" << std::endl;
 }
 
 void MatrizDispersa::insertarUsuarioFinalHorizontal(NodoMatriz *usuarioNuevo, NodoMatriz *cabeceraHorizontal) {
@@ -308,14 +310,18 @@ void MatrizDispersa::insertarUsuarioEnFrente(NodoMatriz *nuevoUsuario, NodoMatri
 
     usuarios->getPrevio()->setSiguiente(nuevoUsuario);
     nuevoUsuario->setSiguiente(usuarios->getSiguiente());
-    usuarios->getSiguiente()->setPrevio(nuevoUsuario);
+    if (usuarios->getSiguiente() != nullptr) {
+        usuarios->getSiguiente()->setPrevio(nuevoUsuario);
+    }
     nuevoUsuario->setPrevio(usuarios->getPrevio());
     usuarios->setPrevio(nullptr);
     usuarios->setSiguiente(nullptr);
 
     usuarios->getArriba()->setAbajo(nuevoUsuario);
     nuevoUsuario->setAbajo(usuarios->getAbajo());
-    usuarios->getAbajo()->setArriba(nuevoUsuario);
+    if (usuarios->getAbajo() != nullptr) {
+        usuarios->getAbajo()->setArriba(nuevoUsuario);
+    }
     nuevoUsuario->setArriba(usuarios->getArriba());
     usuarios->setArriba(nullptr);
     usuarios->setAbajo(nullptr);

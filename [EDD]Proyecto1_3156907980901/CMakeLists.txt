@@ -25,4 +25,10 @@ add_executable(_EDD_Proyecto1_3156907980901 main.cpp
         includes/ListaCircularDoblementeEnlazada/ReporteLista.h
         src/ListaCircularDoblementeEnlazada/ReporteLista.cpp
         includes/MatrizDispersa/ReporteMatriz.h
-        src/MatrizDispersa/ReporteMatriz.cpp)
+        src/MatrizDispersa/ReporteMatriz.cpp
+        includes/ArbolAVL/ArbolAVL.h
+        src/ArbolAVL/ArbolAVL.cpp
+        includes/ArbolAVL/NodoArbol.h
+        src/ArbolAVL/NodoArbol.cpp
+        includes/ArbolAVL/ReporteArbolAVL.h
+        src/ArbolAVL/ReporteArbolAVL.cpp)

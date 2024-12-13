@@ -21,7 +21,7 @@ ReporteLista *reporteLista = new ReporteLista(listaTransacciones);
 void Menus::menuPrincipal() {
     char opcionElegida;
     do {
-        std::cout << "%%%%%%%%%%%%%%%%%%%% Bienvenido a \"Renta de Activos\" %%%%%%%%%%%%%%%%%%%%" <<std::endl;
+        std::cout << "\n%%%%%%%%%%%%%%%%%%%% Bienvenido a \"Renta de Activos\" %%%%%%%%%%%%%%%%%%%%" <<std::endl;
         std::cout << "%%%%%%%%%%%%%%%%%%%%          Menu Principal           %%%%%%%%%%%%%%%%%%%%" <<std::endl;
         std::cout << "%%%%%%%%%%%%%%%%%%%%          1.Ingresar               %%%%%%%%%%%%%%%%%%%%" <<std::endl;
         std::cout << "%%%%%%%%%%%%%%%%%%%%          2.Salir                  %%%%%%%%%%%%%%%%%%%%" <<std::endl;
@@ -42,7 +42,7 @@ void Menus::menuPrincipal() {
 }
 
 void Menus::login() {
-    std::cout << "%%%%%%%%%%%%%%%%%%%% Login %%%%%%%%%%%%%%%%%%%%" <<std::endl;
+    std::cout << "\n%%%%%%%%%%%%%%%%%%%% Login %%%%%%%%%%%%%%%%%%%%" <<std::endl;
 
     std::string username;
     std::string password;
@@ -81,7 +81,7 @@ void Menus::login() {
 void Menus::menuAdministrador() {
     char opcionElegida;
     do {
-        std::cout << "%%%%%%%%%%%%%%%%%%%% Menu Administrador %%%%%%%%%%%%%%%%%%%%" <<std::endl;
+        std::cout << "\n%%%%%%%%%%%%%%%%%%%% Menu Administrador %%%%%%%%%%%%%%%%%%%%" <<std::endl;
         std::cout << "%% 1. Registrar Usuario" <<std::endl;
         std::cout << "%% 2. Reporte Matriz Dispersa" <<std::endl;
         std::cout << "%% 3. Reporte Activos Disponibles de un Departamento" <<std::endl;
@@ -100,13 +100,13 @@ void Menus::menuAdministrador() {
                 break;
             }
             case '2': {
-                std::cout << "%%%%%%%%%%%%%%%%%%%% Reporte Matriz Dispersa %%%%%%%%%%%%%%%%%%%%" <<std::endl;
+                std::cout << "\n%%%%%%%%%%%%%%%%%%%% Reporte Matriz Dispersa %%%%%%%%%%%%%%%%%%%%" <<std::endl;
                 reporteMatriz->reporteMatrizDispersa();
                 std::cout << "Reporte Generado!!!" << std::endl;
                 break;
             }
             case '3': {
-                std::cout << "%%%%%%%%%%%%%%%%%%%% Activos de un Departamento %%%%%%%%%%%%%%%%%%%%" <<std::endl;
+                std::cout << "\n%%%%%%%%%%%%%%%%%%%% Activos de un Departamento %%%%%%%%%%%%%%%%%%%%" <<std::endl;
                 std::cout << "Ingrese el Departamento: " <<std::endl;
                 std::string departamento;
                 std::cin >> departamento;
@@ -115,7 +115,7 @@ void Menus::menuAdministrador() {
                 break;
             }
             case '4': {
-                std::cout << "%%%%%%%%%%%%%%%%%%%% Activos de una Empresa %%%%%%%%%%%%%%%%%%%%" <<std::endl;
+                std::cout << "\n%%%%%%%%%%%%%%%%%%%% Activos de una Empresa %%%%%%%%%%%%%%%%%%%%" <<std::endl;
                 std::cout << "Ingrese la Empresa: " <<std::endl;
                 std::string empresa;
                 std::cin >> empresa;
@@ -124,7 +124,7 @@ void Menus::menuAdministrador() {
                 break;
             }
             case '5': {
-                std::cout << "%%%%%%%%%%%%%%%%%%%% Reporte Transacciones %%%%%%%%%%%%%%%%%%%%" <<std::endl;
+                std::cout << "\n%%%%%%%%%%%%%%%%%%%% Reporte Transacciones %%%%%%%%%%%%%%%%%%%%" <<std::endl;
                 reporteLista->reporteTransacciones();
                 std::cout << "Reporte Generado!!!" <<std::endl;
                 break;
@@ -134,7 +134,7 @@ void Menus::menuAdministrador() {
                 break;
             }
             case '7': {
-                std::cout << "%%%%%%%%%%%%%%%%%%%% Activos Rentados por Usuario %%%%%%%%%%%%%%%%%%%%" <<std::endl;
+                std::cout << "\n%%%%%%%%%%%%%%%%%%%% Activos Rentados por Usuario %%%%%%%%%%%%%%%%%%%%" <<std::endl;
                 std::cout << "... Ingresar UserName del Usuario...:" <<std::endl;
                 std::string userName;
                 std::cin >> userName;
@@ -145,7 +145,7 @@ void Menus::menuAdministrador() {
             case '8': {
                 char opcion;
                 do {
-                    std::cout << "%%%%%%%%%%%%%%%%%%%% Ordenar Transacciones %%%%%%%%%%%%%%%%%%%%" <<std::endl;
+                    std::cout << "\n%%%%%%%%%%%%%%%%%%%% Ordenar Transacciones %%%%%%%%%%%%%%%%%%%%" <<std::endl;
                     std::cout << "%% 1. Ordenar Ascendentemente" <<std::endl;
                     std::cout << "%% 2. Ordenar Descendentemente" <<std::endl;
                     std::cout << "%% 3. Cancelar" <<std::endl;
@@ -184,7 +184,7 @@ void Menus::menuAdministrador() {
 }
 
 void Menus::registroUsuario() {
-    std::cout << "%%%%%%%%%%%%%%%%%%%% Registro Usuario %%%%%%%%%%%%%%%%%%%%" <<std::endl;
+    std::cout << "\n%%%%%%%%%%%%%%%%%%%% Registro Usuario %%%%%%%%%%%%%%%%%%%%" <<std::endl;
     std::cout << "... Ingresar UserName Usuario...:" <<std::endl;
     std::string userName;
     std::cin >> userName;
@@ -209,7 +209,7 @@ void Menus::registroUsuario() {
 }
 
 void Menus::reporteActivosUsuario() {
-    std::cout << "%%%%%%%%%%%%%%%%%%%% Activos de Usuario %%%%%%%%%%%%%%%%%%%%" <<std::endl;
+    std::cout << "\n%%%%%%%%%%%%%%%%%%%% Activos de Usuario %%%%%%%%%%%%%%%%%%%%" <<std::endl;
     std::cout << "... Ingresar UserName del Usuario...:" <<std::endl;
     std::string userName;
     std::cin >> userName;
@@ -244,7 +244,7 @@ void Menus::reporteActivosUsuario() {
 void Menus::menuUsuario(NodoMatriz *usuarioLogeado) {
     char opcionElegida;
     do {
-        std::cout << "%%%%%%%%%%%%%%%%%%%% Menu de Usuario: " <<usuarioLogeado->getUsuario()->getNombre() <<" %%%%%%%%%%%%%%%%%%%%" <<std::endl;
+        std::cout << "\n%%%%%%%%%%%%%%%%%%%% Menu de Usuario: " <<usuarioLogeado->getUsuario()->getNombre() <<" %%%%%%%%%%%%%%%%%%%%" <<std::endl;
         std::cout << "%% 1. Agregar Activo" <<std::endl;
         std::cout << "%% 2. Eliminar Activo" <<std::endl;
         std::cout << "%% 3. Modificar Activo" <<std::endl;
@@ -257,7 +257,7 @@ void Menus::menuUsuario(NodoMatriz *usuarioLogeado) {
 
         switch (opcionElegida) {
             case '1': {
-                std::cout << "%%%%%%%%%%%%%%%%%%%% Agregar Activo %%%%%%%%%%%%%%%%%%%%" <<std::endl;
+                std::cout << "\n%%%%%%%%%%%%%%%%%%%% Agregar Activo %%%%%%%%%%%%%%%%%%%%" <<std::endl;
                 std::cout << "...Ingrese Nombre...: " <<std::endl;
                 std::string nombre;
                 std::cin >> nombre;
@@ -271,7 +271,7 @@ void Menus::menuUsuario(NodoMatriz *usuarioLogeado) {
                 break;
             }
             case '2': {
-                std::cout << "%%%%%%%%%%%%%%%%%%%% Eliminar Activo %%%%%%%%%%%%%%%%%%%%" <<std::endl;
+                std::cout << "\n%%%%%%%%%%%%%%%%%%%% Eliminar Activo %%%%%%%%%%%%%%%%%%%%" <<std::endl;
 
                 //Verificar si el Usuario tiene Activos
 
@@ -297,7 +297,7 @@ void Menus::menuUsuario(NodoMatriz *usuarioLogeado) {
                 break;
             }
             case '6': {
-                std::cout << "%%%%%%%%%%%%%%%%%%%% Mis Activos Rentados %%%%%%%%%%%%%%%%%%%%" <<std::endl;
+                std::cout << "\n%%%%%%%%%%%%%%%%%%%% Mis Activos Rentados %%%%%%%%%%%%%%%%%%%%" <<std::endl;
 
                 //Verificar si el Usuario tiene Activos Rentados
 
@@ -322,7 +322,7 @@ void Menus::menuUsuario(NodoMatriz *usuarioLogeado) {
 }
 
 void Menus::modificarActivo() {
-    std::cout << "%%%%%%%%%%%%%%%%%%%% Modificar Activo %%%%%%%%%%%%%%%%%%%%" <<std::endl;
+    std::cout << "\n%%%%%%%%%%%%%%%%%%%% Modificar Activo %%%%%%%%%%%%%%%%%%%%" <<std::endl;
 
     //Verificar si el Usuario tiene Activos
 
@@ -338,7 +338,7 @@ void Menus::modificarActivo() {
 }
 
 void Menus::rentaActivo(NodoMatriz *usuarioLogeado) {
-    std::cout << "%%%%%%%%%%%%%%%%%%%% Catalogo Activos %%%%%%%%%%%%%%%%%%%%" <<std::endl;
+    std::cout << "\n%%%%%%%%%%%%%%%%%%%% Catalogo Activos %%%%%%%%%%%%%%%%%%%%" <<std::endl;
 
     //Mostrar los Activos que se Pueden Rentar
 
@@ -374,7 +374,7 @@ void Menus::rentaActivo(NodoMatriz *usuarioLogeado) {
 }
 
 void Menus::activosRentados(NodoMatriz *usuarioLogeado) {
-    std::cout << "%%%%%%%%%%%%%%%%%%%% Activos Rentados %%%%%%%%%%%%%%%%%%%%" <<std::endl;
+    std::cout << "\n%%%%%%%%%%%%%%%%%%%% Activos Rentados %%%%%%%%%%%%%%%%%%%%" <<std::endl;
 
     //Mostrar los Activos que estan Rentados
 
