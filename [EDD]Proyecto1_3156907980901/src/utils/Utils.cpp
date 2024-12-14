@@ -16,3 +16,19 @@ std::string Utils::generarIDAlfanumerico() {
     return ID;
 }
 
+bool Utils::isEquals(std::string cadena1, std::string cadena2) {
+    int longitud1 = cadena1.length();
+    int longitud2 = cadena2.length();
+
+    if (longitud1 != longitud2) return false;
+
+    for (int i = 0; i < longitud1; i++) {
+        if (std::tolower(static_cast<unsigned char>(cadena1[i]))
+            != std::tolower(static_cast<unsigned char>(cadena2[i]))) {
+            return false;
+        }
+    }
+    return true;
+}
+
+

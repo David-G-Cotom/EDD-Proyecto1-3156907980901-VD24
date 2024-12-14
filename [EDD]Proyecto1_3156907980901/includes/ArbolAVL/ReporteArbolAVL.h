@@ -5,9 +5,19 @@
 #ifndef REPORTEARBOLAVL_H
 #define REPORTEARBOLAVL_H
 
-
+#include "ArbolAVL.h"
 
 class ReporteArbolAVL {
+
+private:
+    ArbolAVL *arbolAVL;
+
+    std::string recorrerActivosPreOrden(NodoArbol *nodo, std::string username);
+
+public:
+    ReporteArbolAVL(ArbolAVL *arbolAVL);
+
+    void reporteActivosUsuario(NodoArbol *nodo, std::string username);
 
 };
 

@@ -8,6 +8,7 @@
 #include "../../includes/ListaCircularDoblementeEnlazada/ReporteLista.h"
 #include "../../includes/MatrizDispersa/MatrizDispersa.h"
 #include "../../includes/MatrizDispersa/ReporteMatriz.h"
+#include "../../includes/utils/Utils.h"
 
 const std::string USERNAME_ADMIN = "admin";
 const std::string PASSWORD_ADMIN = "admin";
@@ -17,6 +18,10 @@ ReporteMatriz *reporteMatriz = new ReporteMatriz(matrizDispersa);
 
 ListaTransacciones *listaTransacciones = new ListaTransacciones();
 ReporteLista *reporteLista = new ReporteLista(listaTransacciones);
+
+void Menus::cargarDatos() {
+    std::cout << "RECUPERANDO DATOS...";
+}
 
 void Menus::menuPrincipal() {
     char opcionElegida;
@@ -225,10 +230,8 @@ void Menus::reporteActivosUsuario() {
     NodoMatriz *aux = matrizDispersa->existeNodoInterseccion(departamento, empresa);
     if (aux != nullptr) {
         do {
-            if (aux->getUsuario()->getUsername() == userName) {
-
-                //Recibir los Activos  por AVL
-
+            if (Utils::isEquals(aux->getUsuario()->getUsername(), userName)) {
+                aux->getUsuario()->getReporteArbol()->reporteActivosUsuario(aux->getUsuario()->getArbol()->getRaiz(), userName);
                 break;
             }
             aux = aux->getAtras();
@@ -266,22 +269,19 @@ void Menus::menuUsuario(NodoMatriz *usuarioLogeado) {
                 std::string descripcion;
                 std::cin >> descripcion;
 
-                //Insertar el Activo en el AVL del Usuario
-
+                usuarioLogeado->getUsuario()->getArbol()->insertar(new Activo(nombre, descripcion));
                 break;
             }
             case '2': {
                 std::cout << "\n%%%%%%%%%%%%%%%%%%%% Eliminar Activo %%%%%%%%%%%%%%%%%%%%" <<std::endl;
-
-                //Verificar si el Usuario tiene Activos
-
+                if (!usuarioLogeado->getUsuario()->getArbol()->mostrarActivos(true)) {
+                    std::cout << "No hay Activos por Mostrar..." <<std::endl;
+                    break;
+                }
                 std::cout << "...Ingresar ID de Activo a Eliminar...";
                 std::string idActivo;
                 std::cin >> idActivo;
-
-                //Eliminar el Activo
-
-                std::cout << "Activo Eliminado Exitosamente!!!";
+                usuarioLogeado->getUsuario()->getArbol()->eliminar(idActivo);
                 break;
             }
             case '3': {
@@ -298,9 +298,10 @@ void Menus::menuUsuario(NodoMatriz *usuarioLogeado) {
             }
             case '6': {
                 std::cout << "\n%%%%%%%%%%%%%%%%%%%% Mis Activos Rentados %%%%%%%%%%%%%%%%%%%%" <<std::endl;
-
-                //Verificar si el Usuario tiene Activos Rentados
-
+                if (!usuarioLogeado->getUsuario()->getArbol()->mostrarActivos(false)) {
+                    std::cout << "No hay Activos por Mostrar..." <<std::endl;
+                    break;
+                }
                 char valorSalida;
                 do {
                     std::cout << "...Ingresar 1 para Regresar al Menu...";

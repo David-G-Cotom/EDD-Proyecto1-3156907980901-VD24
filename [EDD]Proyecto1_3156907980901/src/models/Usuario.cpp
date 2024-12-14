@@ -8,6 +8,8 @@ Usuario::Usuario(std::string nombre, std::string username, std::string password)
     this->nombre = nombre;
     this->username = username;
     this->password = password;
+    this->arbol = new ArbolAVL();
+    this->reporte = new ReporteArbolAVL(this->arbol);
 }
 
 std::string Usuario::getNombre() {
@@ -32,6 +34,22 @@ std::string Usuario::getPassword() {
 
 void Usuario::setPassword(std::string password) {
     this->password = password;
+}
+
+ArbolAVL* Usuario::getArbol() {
+    return this->arbol;
+}
+
+void Usuario::setArbol(ArbolAVL* arbol) {
+    this->arbol = arbol;
+}
+
+ReporteArbolAVL *Usuario::getReporteArbol() {
+    return this->reporte;
+}
+
+void Usuario::setReporte(ReporteArbolAVL *reporte) {
+    this->reporte = reporte;
 }
 
 

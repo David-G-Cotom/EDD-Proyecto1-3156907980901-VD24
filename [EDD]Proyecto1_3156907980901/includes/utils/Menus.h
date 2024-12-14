@@ -13,7 +13,11 @@
 class Menus {
 
 public:
+    void cargarDatos();
+
     void menuPrincipal();
+
+private:
     void login();
 
     void menuAdministrador();

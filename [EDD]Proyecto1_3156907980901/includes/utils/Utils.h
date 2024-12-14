@@ -12,6 +12,8 @@ class Utils {
 public:
     static std::string generarIDAlfanumerico();
 
+    static bool isEquals(std::string cadena1, std::string cadena2);
+
 };
 
 

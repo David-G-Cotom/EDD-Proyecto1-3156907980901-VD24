@@ -6,6 +6,9 @@
 #define USUARIO_H
 #include <string>
 
+#include "../ArbolAVL/ArbolAVL.h"
+#include "../ArbolAVL/ReporteArbolAVL.h"
+
 
 class Usuario {
 
@@ -13,6 +16,8 @@ private:
     std::string nombre;
     std::string username;
     std::string password;
+    ArbolAVL *arbol;
+    ReporteArbolAVL *reporte;
 
 public:
     Usuario(std::string nombre, std::string username, std::string password);
@@ -23,6 +28,10 @@ public:
     void setUsername(std::string username);
     std::string getPassword();
     void setPassword(std::string password);
+    ArbolAVL *getArbol();
+    void setArbol(ArbolAVL *arbol);
+    ReporteArbolAVL *getReporteArbol();
+    void setReporte(ReporteArbolAVL *reporte);
 
 };
 

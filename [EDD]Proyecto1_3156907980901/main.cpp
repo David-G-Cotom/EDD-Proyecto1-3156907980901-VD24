@@ -4,6 +4,7 @@
 
 int main() {
     auto *menuInicio = new Menus();
+    menuInicio->cargarDatos();
     menuInicio->menuPrincipal();
 
     return 0;

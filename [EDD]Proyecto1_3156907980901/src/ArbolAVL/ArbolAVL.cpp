@@ -28,22 +28,43 @@ void ArbolAVL::insertar(NodoArbol *activo, NodoArbol *&raiz) {
     } else {
         insertar(activo, raiz->getHijoDerecho());
     }
-    raiz->setFactorEquilibrio(this->factorEquilibrio(raiz));
-    if (raiz->getFactorEquilibrio() < -1) {
-        if (raiz->getHijoIzquierdo()->getFactorEquilibrio() > 0) {
-            rotacionDerechaDoble(raiz);
-            return;
-        }
-        rotacionIzquierda(raiz);
+
+    this->equilibrarArbol(raiz);
+}
+
+void ArbolAVL::eliminar(std::string idActivo, NodoArbol *&raiz) {
+    if (raiz == nullptr) {
+        std::cout << "Error en Eliminar Activo!!! Activo NO Existente" << std::endl;;
         return;
     }
-    if (raiz->getFactorEquilibrio() > 1) {
-        if (raiz->getHijoDerecho()->getFactorEquilibrio() < 0) {
-            rotacionIzquierdaDoble(raiz);
+    if (idActivo == raiz->getActivo()->getId()) {
+        if (this->isHoja(raiz)) {
+            raiz = nullptr;
             return;
         }
-        rotacionDerecho(raiz);
+
+        if (raiz->getHijoIzquierdo() == nullptr) {
+            raiz = raiz->getHijoDerecho();
+            return;
+        }
+        if (raiz->getHijoDerecho() == nullptr) {
+            raiz = raiz->getHijoIzquierdo();
+            return;
+        }
+
+        NodoArbol *nodoDerecho = this->masDerecha(raiz->getHijoIzquierdo());
+        raiz->setActivo(nodoDerecho->getActivo());
+        eliminar(nodoDerecho->getActivo()->getId(), raiz->getHijoIzquierdo());
+        idActivo = raiz->getActivo()->getId();
     }
+    if (idActivo < raiz->getActivo()->getId()) {
+        eliminar(idActivo, raiz->getHijoIzquierdo());
+    }
+    if (idActivo > raiz->getActivo()->getId()) {
+        eliminar(idActivo, raiz->getHijoDerecho());
+    }
+
+    this->equilibrarArbol(raiz);
 }
 
 int ArbolAVL::alturaMax(NodoArbol *nodo) {
@@ -60,19 +81,6 @@ int ArbolAVL::factorEquilibrio(NodoArbol *nodo) {
 }
 
 void ArbolAVL::rotacionIzquierda(NodoArbol *&nodo) {
-    NodoArbol *aux = nodo->getHijoIzquierdo();
-    nodo->setHijoIzquierdo(aux->getHijoDerecho());
-    aux->setHijoDerecho(nodo);
-    nodo = aux;
-    nodo->setFactorEquilibrio(this->factorEquilibrio(nodo));
-    nodo->getHijoDerecho()->setFactorEquilibrio(this->factorEquilibrio(nodo->getHijoDerecho()));
-
-    if (nodo->getHijoIzquierdo() == nullptr) return;
-
-    nodo->getHijoIzquierdo()->setFactorEquilibrio(this->factorEquilibrio(nodo->getHijoIzquierdo()));
-}
-
-void ArbolAVL::rotacionDerecho(NodoArbol *&nodo) {
     NodoArbol *aux = nodo->getHijoDerecho();
     nodo->setHijoDerecho(aux->getHijoIzquierdo());
     aux->setHijoIzquierdo(nodo);
@@ -85,24 +93,86 @@ void ArbolAVL::rotacionDerecho(NodoArbol *&nodo) {
     nodo->getHijoDerecho()->setFactorEquilibrio(this->factorEquilibrio(nodo->getHijoDerecho()));
 }
 
+void ArbolAVL::rotacionDerecho(NodoArbol *&nodo) {
+    NodoArbol *aux = nodo->getHijoIzquierdo();
+    nodo->setHijoIzquierdo(aux->getHijoDerecho());
+    aux->setHijoDerecho(nodo);
+    nodo = aux;
+    nodo->setFactorEquilibrio(this->factorEquilibrio(nodo));
+    nodo->getHijoDerecho()->setFactorEquilibrio(this->factorEquilibrio(nodo->getHijoDerecho()));
+
+    if (nodo->getHijoIzquierdo() == nullptr) return;
+
+    nodo->getHijoIzquierdo()->setFactorEquilibrio(this->factorEquilibrio(nodo->getHijoIzquierdo()));
+}
+
 void ArbolAVL::rotacionIzquierdaDoble(NodoArbol *&nodo) {
-    rotacionIzquierda(nodo->getHijoDerecho());
-    rotacionDerecho(nodo);
+    rotacionDerecho(nodo->getHijoDerecho());
+    rotacionIzquierda(nodo);
 }
 
 void ArbolAVL::rotacionDerechaDoble(NodoArbol *&nodo) {
-    rotacionDerecho(nodo->getHijoIzquierdo());
-    rotacionIzquierda(nodo);
+    rotacionIzquierda(nodo->getHijoIzquierdo());
+    rotacionDerecho(nodo);
 }
 
 bool ArbolAVL::isHoja(NodoArbol *nodo) {
     return nodo->getHijoIzquierdo() == nullptr && nodo->getHijoDerecho() == nullptr;
 }
 
+NodoArbol *ArbolAVL::masDerecha(NodoArbol *&nodo) {
+    if (nodo->getHijoDerecho() == nullptr) {
+        return nodo;
+    }
+    return masDerecha(nodo->getHijoDerecho());
+}
+
+void ArbolAVL::equilibrarArbol(NodoArbol *raiz) {
+    raiz->setFactorEquilibrio(this->factorEquilibrio(raiz));
+    if (raiz->getFactorEquilibrio() < -1) {
+        if (raiz->getHijoIzquierdo()->getFactorEquilibrio() > 0) {
+            rotacionDerechaDoble(raiz);
+            return;
+        }
+        rotacionDerecho(raiz);
+        return;
+    }
+    if (raiz->getFactorEquilibrio() > 1) {
+        if (raiz->getHijoDerecho()->getFactorEquilibrio() < 0) {
+            rotacionIzquierdaDoble(raiz);
+            return;
+        }
+        rotacionIzquierda(raiz);
+    }
+}
+
+void ArbolAVL::mostrarActivosPreOrden(NodoArbol *nodo, bool disponibilidadActivos) {
+    if (nodo != nullptr) {
+        if (nodo->getActivo()->getDisponibilidad() == disponibilidadActivos) {
+            std::cout << ">> ID = " << nodo->getActivo()->getId() << "; Nombre = " << nodo->getActivo()->getNombre() << "; Descripcion = " << nodo->getActivo()->getDescripcion() << std::endl;
+        }
+        mostrarActivosPreOrden(nodo->getHijoIzquierdo(), disponibilidadActivos);
+        mostrarActivosPreOrden(nodo->getHijoDerecho(), disponibilidadActivos);
+    }
+}
 
 void ArbolAVL::insertar(Activo *nuevoActivo) {
     auto *nuevoNodo = new NodoArbol(nuevoActivo);
     insertar(nuevoNodo, this->raiz);
+    std::cout << "Nuevo Activo Ingresado!!!" << std::endl;
+}
+
+void ArbolAVL::eliminar(std::string idActivo) {
+    this->eliminar(idActivo, this->raiz);
+    std::cout << "Activo Eliminado Exitosamente!!!";
+}
+
+bool ArbolAVL::mostrarActivos(bool disponibilidadActivos) {
+    if (this->raiz != nullptr) {
+        this->mostrarActivosPreOrden(this->raiz, disponibilidadActivos);
+        return true;
+    }
+    return false;
 }
 
 
