@@ -19,6 +19,8 @@ public:
 
     void reporteActivosUsuario(NodoArbol *nodo, std::string username);
 
+    std::string reporteActivosCabeceras(NodoArbol *nodo, std::string dot);
+
 };
 
 

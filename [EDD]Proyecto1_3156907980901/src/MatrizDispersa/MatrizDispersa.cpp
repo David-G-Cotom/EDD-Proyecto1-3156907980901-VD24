@@ -329,6 +329,35 @@ void MatrizDispersa::insertarUsuarioEnFrente(NodoMatriz *nuevoUsuario, NodoMatri
     nuevoUsuario->setGrupo(usuarios->getGrupo());
 }
 
+NodoArbol *MatrizDispersa::catalogoActivos(Usuario *usuario, bool disponibilidadActivos, std::string idActivo) {
+    if (!this->isVacia()) {
+        return this->catalogoActivos(usuario, this->cabeceraVertical, disponibilidadActivos, idActivo);
+    }
+}
 
+NodoArbol *MatrizDispersa::catalogoActivos(Usuario *usuario, NodoMatriz *nodo, bool disponibilidadActivos, std::string idActivo) {
+    NodoMatriz *aux = nodo;
+    NodoMatriz *aux2;
+    if (aux != nullptr) {
+        while (aux->getSiguiente() != nullptr) {
+            aux = aux->getSiguiente();
+            aux2 = aux;
+            do {
+                if (aux2->getUsuario() != usuario) {
+                    if (disponibilidadActivos) {
+                        aux2->getUsuario()->getArbol()->mostrarActivos(true);
+                    } else {
+                        NodoArbol *activoRentado = aux2->getUsuario()->getArbol()->buscarActivo(idActivo, aux2->getUsuario()->getArbol()->getRaiz());
+
+                        if (activoRentado != nullptr) return activoRentado;
+
+                    }
+                }
+                aux2 = aux->getAtras();
+            } while (aux2 != nullptr);
+        }
+        return catalogoActivos(usuario, nodo->getAbajo(), disponibilidadActivos, idActivo);
+    }
+}
 
 

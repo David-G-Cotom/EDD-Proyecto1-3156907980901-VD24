@@ -156,6 +156,22 @@ void ArbolAVL::mostrarActivosPreOrden(NodoArbol *nodo, bool disponibilidadActivo
     }
 }
 
+NodoArbol *ArbolAVL::buscarActivo(std::string idActivo, NodoArbol *nodo) {
+    if (nodo != nullptr) {
+        if (nodo->getActivo()->getId() == idActivo) {
+            return nodo;
+        }
+        if (idActivo > nodo->getActivo()->getId()) {
+            return buscarActivo(idActivo, nodo->getHijoDerecho());
+        }
+        if (idActivo < nodo->getActivo()->getId()) {
+            return buscarActivo(idActivo, nodo->getHijoIzquierdo());
+        }
+    } else {
+        return nullptr;
+    }
+}
+
 void ArbolAVL::insertar(Activo *nuevoActivo) {
     auto *nuevoNodo = new NodoArbol(nuevoActivo);
     insertar(nuevoNodo, this->raiz);
@@ -164,7 +180,7 @@ void ArbolAVL::insertar(Activo *nuevoActivo) {
 
 void ArbolAVL::eliminar(std::string idActivo) {
     this->eliminar(idActivo, this->raiz);
-    std::cout << "Activo Eliminado Exitosamente!!!";
+    std::cout << "Activo Eliminado Exitosamente!!!" << std::endl;
 }
 
 bool ArbolAVL::mostrarActivos(bool disponibilidadActivos) {
@@ -173,6 +189,17 @@ bool ArbolAVL::mostrarActivos(bool disponibilidadActivos) {
         return true;
     }
     return false;
+}
+
+void ArbolAVL::modificarActivo(std::string idActivo, std::string nuevaDescripcion) {
+    NodoArbol *activo = this->buscarActivo(idActivo, this->raiz);
+    if (activo != nullptr) {
+        activo->getActivo()->setDescripcion(nuevaDescripcion);
+        std::cout << "Activo Modificado:" << std::endl;
+        std::cout << "ID = " << activo->getActivo()->getId() << "; Nombre = " << activo->getActivo()->getNombre() << "; Descripcion = " << activo->getActivo()->getDescripcion() << std::endl;
+        return;
+    }
+    std::cout << "No Existe el Activo";
 }
 
 

@@ -19,9 +19,7 @@ void ReporteMatriz::reporteActivosEmpresa(std::string empresa) {
         aux2 = aux;
         while (aux2 != nullptr) {
             dot += "node[shape = box];\n" + aux2->getUsuario()->getUsername() + ";\n node[shape = circle];\n";
-
-            //RECOGER LOS ACTIVOS
-
+            dot += aux2->getUsuario()->getReporteArbol()->reporteActivosCabeceras(aux2->getUsuario()->getArbol()->getRaiz(), dot);
             aux2 = aux2->getAtras();
         }
         aux = aux->getSiguiente();
@@ -45,9 +43,7 @@ void ReporteMatriz::reporteActivosDepartamento(std::string departamento) {
         aux2 = aux;
         while (aux2 != nullptr) {
             dot += "node[shape = box];\n" + aux2->getUsuario()->getUsername() + ";\n node[shape = circle];\n";
-
-            //RECOGER LOS ACTIVOS
-
+            dot += aux2->getUsuario()->getReporteArbol()->reporteActivosCabeceras(aux2->getUsuario()->getArbol()->getRaiz(), dot);
             aux2 = aux2->getAtras();
         }
         aux = aux->getAbajo();
@@ -130,120 +126,6 @@ void ReporteMatriz::reporteMatrizDispersa() {
         file.close();
     }
     system("dot -Tpng ../Graficas/ReporteMatrizDispersa.txt -o ../Graficas/ReporteMatrizDispersa.png");
-
-    /*NodoMatriz *auxEmpresas = this->matrizDispersa->getCabeceraVertical();
-    NodoMatriz *aux = nullptr;
-    std::string dot = "digraph G{\n{node[shape = box, group = a];\n";
-    while (auxEmpresas != nullptr) {
-        dot += "\"" + auxEmpresas->getNombreCabecera() + "\"->";
-        aux = auxEmpresas;
-        auxEmpresas = auxEmpresas->getAbajo();
-    }
-    auxEmpresas = aux->getArriba();
-    while (auxEmpresas != nullptr) {
-        if (auxEmpresas != this->matrizDispersa->getCabeceraVertical()) {
-            dot += "\"" + auxEmpresas->getNombreCabecera() + "\"->";
-        } else {
-            dot += "\"" + auxEmpresas->getNombreCabecera() + "\"\n}";
-            break;
-        }
-        auxEmpresas = auxEmpresas->getArriba();
-    }
-    dot += "\n{\nrank=same;\nnode[shape = box, group = true];\n";
-
-    NodoMatriz *auxDepartamentos = this->matrizDispersa->getCabeceraHorizontal();
-    aux = nullptr;
-    while (auxDepartamentos != nullptr) {
-        dot += "\"" + auxDepartamentos->getNombreCabecera() + "\"->";
-        aux = auxDepartamentos;
-        auxDepartamentos = auxDepartamentos->getSiguiente();
-    }
-    auxDepartamentos = aux->getPrevio();
-    while (auxDepartamentos != nullptr) {
-        if (auxDepartamentos != this->matrizDispersa->getCabeceraHorizontal()) {
-            dot += "\"" + auxDepartamentos->getNombreCabecera() + "\"->";
-        } else {
-            dot += "\"" + auxDepartamentos->getNombreCabecera() + "\"\n}";
-            break;
-        }
-        auxDepartamentos = auxDepartamentos->getPrevio();
-    }
-    dot += "\nnode[shape = box, group = true];\n";
-
-    NodoMatriz *auxEmpresas2 = this->matrizDispersa->getCabeceraVertical();
-    auxEmpresas = auxEmpresas2;
-    while (auxEmpresas != nullptr) {
-        if (auxEmpresas != nullptr) {
-            dot += "{rank=msame;";
-        } else {
-            dot += "{rank=max;";
-        }
-        while (auxEmpresas != nullptr) {
-            if (auxEmpresas->getUsuario() != nullptr) {
-                dot += "\"" + auxEmpresas->getUsuario()->getUsername() + "\"->";
-            } else {
-                dot += "\"" + auxEmpresas->getNombreCabecera() + "\"->";
-            }
-            aux = auxEmpresas;
-            auxEmpresas = auxEmpresas->getSiguiente();
-        }
-        auxEmpresas = aux->getPrevio();
-        while (auxEmpresas != nullptr) {
-            if (auxEmpresas != auxEmpresas2) {
-                if (auxEmpresas->getUsuario() != nullptr) {
-                    dot += "\"" + auxEmpresas->getUsuario()->getUsername() + "\"->";
-                } else {
-                    dot += "\"" + auxEmpresas->getNombreCabecera() + "\"->";
-                }
-            } else {
-                dot += "\"" + auxEmpresas->getNombreCabecera() + "\"}\n";
-                break;
-            }
-            auxEmpresas = auxEmpresas->getPrevio();
-        }
-        auxEmpresas = auxEmpresas->getAbajo();
-        auxEmpresas2 = auxEmpresas2->getAbajo();
-    }
-
-    NodoMatriz *auxDepartamentos2 = this->matrizDispersa->getCabeceraHorizontal();
-    auxDepartamentos = auxDepartamentos2;
-    while (auxDepartamentos != nullptr) {
-        while (auxDepartamentos != nullptr) {
-            if (auxDepartamentos->getUsuario() != nullptr) {
-                dot += "\"" + auxDepartamentos->getUsuario()->getUsername() + "\"->";
-            } else {
-                dot += "\"" + auxDepartamentos->getNombreCabecera() + "\"->";
-            }
-            aux = auxDepartamentos;
-            auxDepartamentos = auxDepartamentos->getAbajo();
-        }
-        auxDepartamentos = aux->getArriba();
-        while (auxDepartamentos != nullptr) {
-            if (auxDepartamentos != auxDepartamentos2) {
-                if (auxDepartamentos->getUsuario() != nullptr) {
-                    dot += "\"" + auxDepartamentos->getUsuario()->getUsername() + "\"->";
-                } else {
-                    dot += "\"" + auxDepartamentos->getNombreCabecera() + "\"->";
-                }
-            } else {
-                dot += "\"" + auxDepartamentos->getNombreCabecera() + "\"\n";
-                break;
-            }
-            auxDepartamentos = auxDepartamentos->getArriba();
-        }
-        auxDepartamentos = auxDepartamentos->getSiguiente();
-        auxDepartamentos2 = auxDepartamentos2->getSiguiente();
-    }
-    dot += "\n}";
-    std::ofstream file;
-    file.open("../Graficas/ReporteMatrizDispersa.txt");
-    if (file.is_open()) {
-        file << dot;
-        file.close();
-    }
-    system("dot -Tpng ../Graficas/ReporteMatrizDispersa.txt -o ../Graficas/ReporteMatrizDispersa.png");*/
 }
-
-
 
 

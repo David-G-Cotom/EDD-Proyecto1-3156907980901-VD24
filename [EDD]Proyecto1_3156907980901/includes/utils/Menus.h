@@ -25,9 +25,11 @@ private:
     void reporteActivosUsuario();
 
     void menuUsuario(NodoMatriz *usuarioLogeado);
-    void modificarActivo();
+    void modificarActivo(NodoMatriz *usuarioLogeado);
     void rentaActivo(NodoMatriz *usuarioLogeado);
     void activosRentados(NodoMatriz *usuarioLogeado);
+
+    void regresarMenu();
 
 };
 

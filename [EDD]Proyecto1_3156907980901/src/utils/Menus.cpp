@@ -160,13 +160,16 @@ void Menus::menuAdministrador() {
                         case '1': {
                             listaTransacciones->setOrdenListaAscendente(true);
                             std::cout << "Orden Ascendente Establecido!!!" <<std::endl;
+                            break;
                         }
                         case '2': {
                             listaTransacciones->setOrdenListaAscendente(false);
                             std::cout << "Orden Descendente Establecido!!!" <<std::endl;
+                            break;
                         }
                         case '3': {
                             std::cout << "Ordenamiento Cancelado" <<std::endl;
+                            break;
                         }
                         default: {
                             std::cout << "Opcion ingresada invalida. Intente otra vez" << std::endl;
@@ -285,7 +288,7 @@ void Menus::menuUsuario(NodoMatriz *usuarioLogeado) {
                 break;
             }
             case '3': {
-                modificarActivo();
+                modificarActivo(usuarioLogeado);
                 break;
             }
             case '4': {
@@ -302,11 +305,7 @@ void Menus::menuUsuario(NodoMatriz *usuarioLogeado) {
                     std::cout << "No hay Activos por Mostrar..." <<std::endl;
                     break;
                 }
-                char valorSalida;
-                do {
-                    std::cout << "...Ingresar 1 para Regresar al Menu...";
-                    std::cin >> valorSalida;
-                } while (valorSalida != '1');
+                regresarMenu();
                 break;
             }
             case '7': {
@@ -322,11 +321,12 @@ void Menus::menuUsuario(NodoMatriz *usuarioLogeado) {
     } while (opcionElegida != '7');
 }
 
-void Menus::modificarActivo() {
+void Menus::modificarActivo(NodoMatriz *usuarioLogeado) {
     std::cout << "\n%%%%%%%%%%%%%%%%%%%% Modificar Activo %%%%%%%%%%%%%%%%%%%%" <<std::endl;
-
-    //Verificar si el Usuario tiene Activos
-
+    if (!usuarioLogeado->getUsuario()->getArbol()->mostrarActivos(true)) {
+        std::cout << "No hay Activos por Mostrar..." <<std::endl;
+        return;
+    }
     std::cout << "...Ingresar ID de Activo a Modificar...";
     std::string idActivo;
     std::cin >> idActivo;
@@ -335,19 +335,17 @@ void Menus::modificarActivo() {
     std::string nuevaDescripcion;
     std::cin >> nuevaDescripcion;
 
-    //Realizar la Modificacion Siempre Verificando que el ID del Activo "Seleccionado sea Valido"
+    usuarioLogeado->getUsuario()->getArbol()->modificarActivo(idActivo, nuevaDescripcion);
+    regresarMenu();
 }
 
 void Menus::rentaActivo(NodoMatriz *usuarioLogeado) {
     std::cout << "\n%%%%%%%%%%%%%%%%%%%% Catalogo Activos %%%%%%%%%%%%%%%%%%%%" <<std::endl;
-
-    //Mostrar los Activos que se Pueden Rentar
-
-    std::cout << "%% 1. Rentar Activo" <<std::endl;
-    std::cout << "%% 2. Regresar a Menu" <<std::endl;
-    bool opcionValida = false;
+    matrizDispersa->catalogoActivos(usuarioLogeado->getUsuario(), true, "");
+    char opcionElegida;
     do {
-        char opcionElegida;
+        std::cout << "%% 1. Rentar Activo" <<std::endl;
+        std::cout << "%% 2. Regresar a Menu" <<std::endl;
         std::cout << "...Ingresar Opcion...: ";
         std::cin >> opcionElegida;
 
@@ -356,58 +354,92 @@ void Menus::rentaActivo(NodoMatriz *usuarioLogeado) {
                 std::cout << "Ingresar ID de Activo a Rentar...";
                 std::string idActivo;
                 std::cin >> idActivo;
-
-                //Rentar Activo Verificando la Validez del ID
-
-                opcionValida = true;
+                NodoArbol *activoRentado = matrizDispersa->catalogoActivos(usuarioLogeado->getUsuario(), false, idActivo);
+                if (activoRentado != nullptr) {
+                    std::cout << ">> Activo a Rentar:" <<std::endl;
+                    std::cout << ">> ID = " << idActivo << "; Nombre = " << activoRentado->getActivo()->getNombre() << "; Descripcion = " << activoRentado->getActivo()->getDescripcion() << std::endl;
+                    std::cout << "Ingrese los Dias por Rentar";
+                    int dias;
+                    std::cin >> dias;
+                    time_t t = time(nullptr);
+                    tm *tiempoLocal = localtime(&t);
+                    std::string fechaActual = std::to_string(tiempoLocal->tm_mday) + "-" + std::to_string(tiempoLocal->tm_mon + 1) + "-" + std::to_string(tiempoLocal->tm_year + 1900);
+                    activoRentado->getActivo()->setDisponibilidad(false);
+                    NodoMatriz *nodoDepartamento = matrizDispersa->buscarCabeceraHorizontal(usuarioLogeado);
+                    NodoMatriz *nodoEmpresa = matrizDispersa->buscarCabeceraVertical(usuarioLogeado);
+                    listaTransacciones->insertarTransaccion(new Transaccion(activoRentado->getActivo(), usuarioLogeado->getUsuario()->getNombre(), nodoDepartamento->getNombreCabecera(), nodoEmpresa->getNombreCabecera(), fechaActual, dias));
+                    std::cout << "Activo Rentado Exitosamente" << std::endl;
+                } else {
+                    std::cout << "El Activo no Existe..." << std::endl;
+                }
                 break;
             }
             case '2': {
-                opcionValida = true;
+                std::cout << "Regresando..." << std::endl;
                 break;
             }
             default: {
                 std::cout << "Opcion ingresada invalida. Intente otra vez" << std::endl;
-                opcionValida = false;
+                break;
             }
         }
-    } while (!opcionValida);
+    } while (opcionElegida != 1 && opcionElegida != 2);
 }
 
 void Menus::activosRentados(NodoMatriz *usuarioLogeado) {
     std::cout << "\n%%%%%%%%%%%%%%%%%%%% Activos Rentados %%%%%%%%%%%%%%%%%%%%" <<std::endl;
-
-    //Mostrar los Activos que estan Rentados
-
-    std::cout << "%% 1. Registrar Devolucion" <<std::endl;
-    std::cout << "%% 2. Regresar a Menu" <<std::endl;
-    bool opcionValida = false;
-    do {
+    if (listaTransacciones->recorrerListaTransaccion(usuarioLogeado->getUsuario()->getNombre())) {
         char opcionElegida;
-        std::cout << "...Ingresar Opcion...: ";
-        std::cin >> opcionElegida;
+        do {
+            std::cout << "%% 1. Registrar Devolucion" << std::endl;
+            std::cout << "%% 2. Regresar a Menu" << std::endl;
+            std::cout << "...Ingresar Opcion...: ";
+            std::cin >> opcionElegida;
 
-        switch (opcionElegida) {
-            case '1': {
-                std::cout << "Ingresar ID de Activo a Devolver...";
-                std::string idActivo;
-                std::cin >> idActivo;
+            switch (opcionElegida) {
+                case '1': {
+                    std::cout << "Ingresar ID de Activo a Devolver...";
+                    std::string idActivo;
+                    std::cin >> idActivo;
+                    NodoArbol *activoRentado = matrizDispersa->catalogoActivos(usuarioLogeado->getUsuario(), false, idActivo);
+                    if (activoRentado != nullptr) {
+                        std::cout << ">> Activo Devuelto:" <<std::endl;
+                        std::cout << ">> ID = " << idActivo << "; Nombre = " << activoRentado->getActivo()->getNombre() << "; Descripcion = " << activoRentado->getActivo()->getDescripcion() << std::endl;
+                        time_t t = time(nullptr);
+                        tm *tiempoLocal = localtime(&t);
+                        std::string fechaActual = std::to_string(tiempoLocal->tm_mday) + "-" + std::to_string(tiempoLocal->tm_mon + 1) + "-" + std::to_string(tiempoLocal->tm_year + 1900);
+                        activoRentado->getActivo()->setDisponibilidad(true);
+                        NodoMatriz *nodoDepartamento = matrizDispersa->buscarCabeceraHorizontal(usuarioLogeado);
+                        NodoMatriz *nodoEmpresa = matrizDispersa->buscarCabeceraVertical(usuarioLogeado);
+                        listaTransacciones->insertarTransaccion(new Transaccion(activoRentado->getActivo(), usuarioLogeado->getUsuario()->getNombre(), nodoDepartamento->getNombreCabecera(), nodoEmpresa->getNombreCabecera(), fechaActual, 0));
+                        std::cout << "Activo Devuelto Exitosamente" << std::endl;
+                    } else {
+                        std::cout << "El Activo no Existe..." << std::endl;
+                    }
+                    break;
+                }
+                case '2': {
+                    std::cout << "Regresando..." << std::endl;
+                    break;
+                }
+                default: {
+                    std::cout << "Opcion ingresada invalida. Intente otra vez" << std::endl;
+                    break;
+                }
+            }
+        } while (opcionElegida != 1 && opcionElegida != 2);
+    } else {
+        std::cout << "No Tienes Activos Rentados!!!";
+    }
+}
 
-                //Devolver Activo Verificando la Validez del ID
-
-                opcionValida = true;
-                break;
-            }
-            case '2': {
-                opcionValida = true;
-                break;
-            }
-            default: {
-                std::cout << "Opcion ingresada invalida. Intente otra vez" << std::endl;
-                opcionValida = false;
-            }
-        }
-    } while (!opcionValida);
+void Menus::regresarMenu() {
+    char valorSalida;
+    do {
+        std::cout << "...Ingresar 1 para Regresar al Menu...";
+        std::cin >> valorSalida;
+    } while (valorSalida != '1');
+    std::cout << "Regresando..." << std::endl;
 }
 
 

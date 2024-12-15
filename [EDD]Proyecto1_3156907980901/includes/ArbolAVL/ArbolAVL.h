@@ -44,6 +44,10 @@ public:
 
     bool mostrarActivos(bool disponibilidadActivos);
 
+    void modificarActivo(std::string idActivo, std::string nuevaDescripcion);
+
+    NodoArbol *buscarActivo(std::string idActivo, NodoArbol *nodo);
+
 };
 
 
