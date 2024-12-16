@@ -5,7 +5,6 @@
 #ifndef LISTATRANSACCIONES_H
 #define LISTATRANSACCIONES_H
 #include <string>
-
 #include "NodoLista.h"
 #include "../models/Transaccion.h"
 
@@ -17,6 +16,10 @@ private:
     NodoLista *fin;
 
     bool ordenListaAscendente;
+
+    void insertarEnInicio(NodoLista *nodo);
+    void insertarEnMedio(NodoLista *nodo, NodoLista *nodoSiguiente);
+    void insertarEnFinal(NodoLista *nodo);
 
 public:
     ListaTransacciones();
@@ -31,9 +34,6 @@ public:
     void setOrdenListaAscendente(bool ordenListaAscendente);
 
     void insertarTransaccion(Transaccion *transaccion);
-    void insertarEnInicio(NodoLista *nodo);
-    void insertarEnMedio(NodoLista *nodo, NodoLista *nodoSiguiente);
-    void insertarEnFinal(NodoLista *nodo);
 
     bool recorrerListaTransaccion(std::string usuario);
 

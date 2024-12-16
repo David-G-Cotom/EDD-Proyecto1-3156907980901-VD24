@@ -3,7 +3,6 @@
 //
 
 #include "../../includes/ArbolAVL/ReporteArbolAVL.h"
-
 #include <fstream>
 
 ReporteArbolAVL::ReporteArbolAVL(ArbolAVL *arbolAVL) {
@@ -11,18 +10,18 @@ ReporteArbolAVL::ReporteArbolAVL(ArbolAVL *arbolAVL) {
 }
 
 std::string ReporteArbolAVL::recorrerActivosPreOrden(NodoArbol *nodo, std::string dot) {
-    std::string dotAux = "";
+    std::string dotAux;
     if (nodo != nullptr && nodo->getActivo()->getDisponibilidad()) {
-        dotAux += "\"" + nodo->getActivo()->getId() + "\"[label = <" + nodo->getActivo()->getId() + "<br />" + nodo->getActivo()->getNombre() + "> color = blue];\n";
+        dotAux += "\"" + nodo->getActivo()->getId() + "\"[label=<" + nodo->getActivo()->getId() + "<br/>" + nodo->getActivo()->getNombre() + "> fillcolor=\"#8080F0\"];\n";
         if (nodo->getHijoIzquierdo() != nullptr) {
             dotAux += recorrerActivosPreOrden(nodo->getHijoIzquierdo(), dotAux) + "\"" + nodo->getActivo()->getId() + "\" -> \"" + nodo->getHijoIzquierdo()->getActivo()->getId() + "\";\n";
         }
         if (nodo->getHijoDerecho() != nullptr) {
-            dotAux += recorrerActivosPreOrden(nodo->getHijoDerecho(), dotAux) + "\"" + nodo->getActivo()->getId() + "\" -> \"" + nodo->getHijoDerecho()->getActivo()->getId() + "\";\"";
+            dotAux += recorrerActivosPreOrden(nodo->getHijoDerecho(), dotAux) + "\"" + nodo->getActivo()->getId() + "\" -> \"" + nodo->getHijoDerecho()->getActivo()->getId() + "\";\n";
         }
     }
     if (nodo != nullptr && !nodo->getActivo()->getDisponibilidad()) {
-        dotAux += nodo->getActivo()->getId() + "\"[label = <\"" + nodo->getActivo()->getId() + "\"<br />" + nodo->getActivo()->getNombre() + "> color = red];\n";
+        dotAux += nodo->getActivo()->getId() + "\"[label=<\"" + nodo->getActivo()->getId() + "\"<br/>" + nodo->getActivo()->getNombre() + "> fillcolor=\"#F08080\"];\n";
         if (nodo->getHijoIzquierdo() != nullptr) {
             dotAux += recorrerActivosPreOrden(nodo->getHijoIzquierdo(), dotAux) + "\"" + nodo->getActivo()->getId() + "\" -> \"" + nodo->getHijoIzquierdo()->getActivo()->getId() + "\";\n";
         }
@@ -34,7 +33,7 @@ std::string ReporteArbolAVL::recorrerActivosPreOrden(NodoArbol *nodo, std::strin
 }
 
 void ReporteArbolAVL::reporteActivosUsuario(NodoArbol *nodo, std::string username) {
-    std::string dot = "digraph{\nrankdir = TB;\n node[shape = box]\n " + username + "\n node[shape = circle]; \n";
+    std::string dot = "digraph{\nrankdir = TB;\nlabel = \"Activos de un Usuario\";\nlabelloc = t;\nnode[color=transparent style=filled];\nnode[shape = box]\n" + username + "\nnode[shape = circle]; \n";
     dot += recorrerActivosPreOrden(nodo, dot) + "\n}";
     std::ofstream file;
     file.open("../Graficas/ReporteActivosUsuario.txt");
@@ -46,9 +45,9 @@ void ReporteArbolAVL::reporteActivosUsuario(NodoArbol *nodo, std::string usernam
 }
 
 std::string ReporteArbolAVL::reporteActivosCabeceras(NodoArbol *nodo, std::string dot) {
-    std::string dotAux = "";
+    std::string dotAux;
     if (nodo != nullptr && nodo->getActivo()->getDisponibilidad()) {
-        dotAux += "\"" + nodo->getActivo()->getId() + "\"[ label = <" + nodo->getActivo()->getId() + "<br />" + nodo->getActivo()->getNombre() + "> color = blue];\n";
+        dotAux += "\"" + nodo->getActivo()->getId() + "\"[label=<" + nodo->getActivo()->getId() + "<br/>" + nodo->getActivo()->getNombre() + "> fillcolor=\"#8080F0\"];\n";
         if (nodo->getHijoIzquierdo() != nullptr) {
             dotAux += reporteActivosCabeceras(nodo->getHijoIzquierdo(), dotAux) + "\"" + nodo->getActivo()->getId() + "\" -> \"" + nodo->getHijoIzquierdo()->getActivo()->getId() + "\";\n";
         }
@@ -57,7 +56,7 @@ std::string ReporteArbolAVL::reporteActivosCabeceras(NodoArbol *nodo, std::strin
         }
     }
     if (nodo != nullptr && !nodo->getActivo()->getDisponibilidad()) {
-        dotAux += nodo->getActivo()->getId() + "\"[label = <\"" + nodo->getActivo()->getId() + "\"<br />" + nodo->getActivo()->getNombre() + "> color = red];\n";
+        dotAux += nodo->getActivo()->getId() + "\"[label=<\"" + nodo->getActivo()->getId() + "\"<br/>" + nodo->getActivo()->getNombre() + "> fillcolor=\"#F08080\"];\n";
         if (nodo->getHijoIzquierdo() != nullptr) {
             dotAux += recorrerActivosPreOrden(nodo->getHijoIzquierdo(), dotAux) + "\"" + nodo->getActivo()->getId() + "\" -> \"" + nodo->getHijoIzquierdo()->getActivo()->getId() + "\";\n";
         }

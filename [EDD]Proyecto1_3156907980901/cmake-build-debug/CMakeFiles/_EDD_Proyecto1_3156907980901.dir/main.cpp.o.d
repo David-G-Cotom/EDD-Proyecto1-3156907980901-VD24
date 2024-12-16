@@ -157,4 +157,9 @@ CMakeFiles/_EDD_Proyecto1_3156907980901.dir/main.cpp.o: \
  /usr/include/c++/13/bits/istream.tcc \
  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/includes/utils/Menus.h \
  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/includes/utils/../MatrizDispersa/NodoMatriz.h \
- /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/includes/utils/../MatrizDispersa/../models/Usuario.h
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/includes/utils/../MatrizDispersa/../models/Usuario.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/includes/utils/../MatrizDispersa/../models/../ArbolAVL/ArbolAVL.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/includes/utils/../MatrizDispersa/../models/../ArbolAVL/NodoArbol.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/includes/utils/../MatrizDispersa/../models/../ArbolAVL/../models/Activo.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/includes/utils/../MatrizDispersa/../models/../ArbolAVL/ReporteArbolAVL.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/includes/utils/../MatrizDispersa/../models/../ArbolAVL/ArbolAVL.h

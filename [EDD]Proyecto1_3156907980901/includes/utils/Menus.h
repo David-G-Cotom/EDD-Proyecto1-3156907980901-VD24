@@ -4,8 +4,6 @@
 
 #ifndef MENUS_H
 #define MENUS_H
-#include <string>
-#include <iostream>
 
 #include "../MatrizDispersa/NodoMatriz.h"
 

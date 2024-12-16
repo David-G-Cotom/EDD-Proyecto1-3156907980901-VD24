@@ -4,6 +4,7 @@
 
 #include "../../includes/MatrizDispersa/MatrizDispersa.h"
 #include <iostream>
+#include "../../includes/utils/Utils.h"
 
 MatrizDispersa::MatrizDispersa() {
     this->cabeceraHorizontal = nullptr;
@@ -36,7 +37,7 @@ NodoMatriz *MatrizDispersa::existeDepartamento(std::string nombreCabecera) {
     NodoMatriz *aux = this->cabeceraHorizontal;
     while (aux != nullptr) {
 
-        if (aux->getNombreCabecera() == nombreCabecera) return aux;
+        if (Utils::isEquals(aux->getNombreCabecera(), nombreCabecera)) return aux;
 
         aux = aux->getSiguiente();
     }
@@ -49,7 +50,7 @@ NodoMatriz *MatrizDispersa::existeEmpresa(std::string nombreCabecera) {
     NodoMatriz *aux = this->cabeceraVertical;
     while (aux != nullptr) {
 
-        if (aux->getNombreCabecera() == nombreCabecera) return aux;
+        if (Utils::isEquals(aux->getNombreCabecera(), nombreCabecera)) return aux;
 
         aux = aux->getAbajo();
     }
@@ -123,7 +124,7 @@ void MatrizDispersa::insretarUsuario(Usuario *usuario, std::string departamento,
     }
 
     NodoMatriz *auxCabeceraHorizontal = cabeceraHorizontalActual->getAbajo();
-    NodoMatriz *usuarioCabeceraVertical;
+    NodoMatriz *usuarioCabeceraVertical = nullptr;
     bool isAbajo = false;
     while (auxCabeceraHorizontal != nullptr) {
         usuarioCabeceraVertical = buscarCabeceraVertical(auxCabeceraHorizontal);
@@ -138,7 +139,7 @@ void MatrizDispersa::insretarUsuario(Usuario *usuario, std::string departamento,
     }
 
     NodoMatriz *auxCabeceraVertical = cabeceraVerticalActual->getSiguiente();
-    NodoMatriz *usuarioCabeceraHorizontal;
+    NodoMatriz *usuarioCabeceraHorizontal = nullptr;
     bool isDerecha = false;
     while (auxCabeceraVertical != nullptr) {
         usuarioCabeceraHorizontal = buscarCabeceraHorizontal(auxCabeceraVertical);
@@ -247,7 +248,7 @@ bool MatrizDispersa::masAbajo(NodoMatriz *cabeceraVertical, std::string empresa)
     NodoMatriz *aux = cabeceraVertical;
     while (aux != nullptr) {
 
-        if (aux->getNombreCabecera() == empresa) return true;
+        if (Utils::isEquals(aux->getNombreCabecera(), empresa)) return true;
 
         aux = aux->getAbajo();
     }
@@ -258,7 +259,7 @@ bool MatrizDispersa::masDerecha(NodoMatriz *cabeceraHorizontal, std::string depa
     NodoMatriz *aux = cabeceraHorizontal;
     while (aux != nullptr) {
 
-        if (aux->getNombreCabecera() == departamento) return true;
+        if (Utils::isEquals(aux->getNombreCabecera(), departamento)) return true;
 
         aux = aux->getSiguiente();
     }
@@ -274,7 +275,7 @@ NodoMatriz *MatrizDispersa::existeNodoInterseccion(std::string departamento, std
     NodoMatriz *aux = nodoDepartamento->getAbajo();
     while (aux != nullptr) {
 
-        if (nodoEmpresa->getNombreCabecera() == buscarCabeceraVertical(aux)->getNombreCabecera()) return aux;
+        if (Utils::isEquals(nodoEmpresa->getNombreCabecera(), buscarCabeceraVertical(aux)->getNombreCabecera())) return aux;
 
         aux = aux->getAbajo();
     }
@@ -286,7 +287,7 @@ bool MatrizDispersa::existeUsuario(NodoMatriz *usuarios, std::string username, s
     if (aux != nullptr) {
         while (aux != nullptr) {
 
-            if (aux->getUsuario()->getUsername() == username && aux->getUsuario()->getPassword() == password) return true;
+            if (Utils::isEquals(aux->getUsuario()->getUsername(), username) && Utils::isEquals(aux->getUsuario()->getPassword(), password)) return true;
 
             aux = aux->getAtras();
         }

@@ -3,7 +3,6 @@
 //
 
 #include "../../includes/models/Activo.h"
-
 #include "../../includes/utils/Utils.h"
 
 Activo::Activo(std::string nombre, std::string descripcion) {

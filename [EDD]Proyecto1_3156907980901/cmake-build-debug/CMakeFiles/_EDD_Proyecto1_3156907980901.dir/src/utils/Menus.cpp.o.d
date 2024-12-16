@@ -2,6 +2,7 @@ CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.o: \
  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/Menus.cpp \
  /usr/include/stdc-predef.h \
  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/utils/Menus.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/utils/../MatrizDispersa/NodoMatriz.h \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -121,9 +122,14 @@ CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.o: \
  /usr/include/c++/13/bits/memory_resource.h /usr/include/c++/13/cstddef \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
- /usr/include/c++/13/bits/ranges_util.h /usr/include/c++/13/iostream \
- /usr/include/c++/13/ostream /usr/include/c++/13/ios \
- /usr/include/c++/13/exception /usr/include/c++/13/bits/exception_ptr.h \
+ /usr/include/c++/13/bits/ranges_util.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/utils/../MatrizDispersa/../models/Usuario.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/utils/../MatrizDispersa/../models/../ArbolAVL/ArbolAVL.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/utils/../MatrizDispersa/../models/../ArbolAVL/NodoArbol.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/utils/../MatrizDispersa/../models/../ArbolAVL/../models/Activo.h \
+ /usr/include/c++/13/iostream /usr/include/c++/13/ostream \
+ /usr/include/c++/13/ios /usr/include/c++/13/exception \
+ /usr/include/c++/13/bits/exception_ptr.h \
  /usr/include/c++/13/bits/cxxabi_init_exception.h \
  /usr/include/c++/13/typeinfo /usr/include/c++/13/bits/nested_exception.h \
  /usr/include/c++/13/bits/ios_base.h /usr/include/c++/13/ext/atomicity.h \
@@ -158,8 +164,10 @@ CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/utils/../MatrizDispersa/NodoMatriz.h \
- /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/utils/../MatrizDispersa/../models/Usuario.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/utils/../MatrizDispersa/../models/../ArbolAVL/ReporteArbolAVL.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/utils/../MatrizDispersa/../models/../ArbolAVL/ArbolAVL.h \
+ /usr/include/c++/13/limits /usr/include/c++/13/sstream \
+ /usr/include/c++/13/bits/sstream.tcc \
  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/ListaCircularDoblementeEnlazada/ListaTransacciones.h \
  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/ListaCircularDoblementeEnlazada/NodoLista.h \
  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/ListaCircularDoblementeEnlazada/../models/Transaccion.h \
@@ -169,4 +177,5 @@ CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.o: \
  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/MatrizDispersa/MatrizDispersa.h \
  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/MatrizDispersa/NodoMatriz.h \
  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/MatrizDispersa/ReporteMatriz.h \
- /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/MatrizDispersa/MatrizDispersa.h
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/MatrizDispersa/MatrizDispersa.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/../../includes/utils/Utils.h

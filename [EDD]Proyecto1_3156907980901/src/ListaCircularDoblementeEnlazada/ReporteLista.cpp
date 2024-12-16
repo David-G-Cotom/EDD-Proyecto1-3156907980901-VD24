@@ -3,16 +3,16 @@
 //
 
 #include "../../includes/ListaCircularDoblementeEnlazada/ReporteLista.h"
-
 #include <fstream>
+#include "../../includes/utils/Utils.h"
 
 ReporteLista::ReporteLista(ListaTransacciones *listaTransacciones) {
     this->listaTransacciones = listaTransacciones;
 }
 
-void ReporteLista::reporteActivosRentadosUsuario(std::string usuairo) {
+void ReporteLista::reporteActivosRentadosUsuario(std::string usuario) {
     std::string dot = "digraph{\nrankdir=LR;\n node[shape = box];\n";
-    dot = contenidoReporteActivosRentadosUsuario(dot, usuairo);
+    dot = contenidoReporteActivosRentadosUsuario(dot, usuario);
     dot += "}";
 
     std::ofstream file;
@@ -31,7 +31,7 @@ std::string ReporteLista::contenidoReporteActivosRentadosUsuario(std::string dot
     if (!this->listaTransacciones->isVacia()) {
         NodoLista *aux = this->listaTransacciones->getInicio();
         do {
-            if ((aux->getTransaccion()->getUsuario() == usuario) && (aux->getTransaccion()->getDias() != 0)) {
+            if (Utils::isEquals(aux->getTransaccion()->getUsuario(), usuario) && (aux->getTransaccion()->getDias() != 0)) {
                 contador++;
                 dot += "activo" + std::to_string(contador) + "[label = <" + aux->getTransaccion()->getActivo()->getId() + "<br/>" + aux->getTransaccion()->getActivo()->getNombre() + ">]\n";
             }
@@ -39,7 +39,7 @@ std::string ReporteLista::contenidoReporteActivosRentadosUsuario(std::string dot
         } while (aux != this->listaTransacciones->getInicio());
         int contador2 = 0;
         do {
-            if (aux->getTransaccion()->getUsuario() == usuario
+            if (Utils::isEquals(aux->getTransaccion()->getUsuario(), usuario)
                 && aux->getTransaccion()->getDias() != 0
                 && contador2 != contador-1) {
                 contador2++;

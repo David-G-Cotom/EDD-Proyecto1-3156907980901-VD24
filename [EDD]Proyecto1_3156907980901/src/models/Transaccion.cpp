@@ -3,7 +3,6 @@
 //
 
 #include "../../includes/models/Transaccion.h"
-
 #include "../../includes/utils/Utils.h"
 
 Transaccion::Transaccion(Activo *activo, std::string usuario, std::string departamentoUsuario, std::string empresaUsuario, std::string fecha, int dias) {

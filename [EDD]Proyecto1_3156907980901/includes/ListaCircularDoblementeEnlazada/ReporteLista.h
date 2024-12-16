@@ -15,7 +15,7 @@ private:
 public:
     ReporteLista(ListaTransacciones *listaTransacciones);
 
-    void reporteActivosRentadosUsuario(std::string usuairo);
+    void reporteActivosRentadosUsuario(std::string usuario);
     std::string contenidoReporteActivosRentadosUsuario(std::string dot, std::string usuario);
 
     void reporteTransacciones();

@@ -14,6 +14,8 @@ public:
 
     static bool isEquals(std::string cadena1, std::string cadena2);
 
+    static void verificarEntradaNumerica(int &valorAsignado, std::string textoMostrar);
+
 };
 
 

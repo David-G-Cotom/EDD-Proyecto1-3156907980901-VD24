@@ -3,7 +3,6 @@
 //
 
 #include "../../includes/MatrizDispersa/ReporteMatriz.h"
-
 #include <fstream>
 
 ReporteMatriz::ReporteMatriz(MatrizDispersa *matrizDispersa) {
@@ -11,14 +10,14 @@ ReporteMatriz::ReporteMatriz(MatrizDispersa *matrizDispersa) {
 }
 
 void ReporteMatriz::reporteActivosEmpresa(std::string empresa) {
-    std::string dot = "digraph{\nrankdir = TB;node[shape = box, color = red]\n" + empresa + "\n";
+    std::string dot = "digraph{\nrankdir = TB;\nlabel = \"Activos de una Empresa\";\nlabelloc = t;\nnode[style = filled];\nnode[shape=box color=red fillcolor=\"#8080F0\"];\n" + empresa + ";\n";
     NodoMatriz *nodoEmpresa = this->matrizDispersa->existeEmpresa(empresa);
     NodoMatriz *aux = nodoEmpresa->getSiguiente();
-    NodoMatriz *aux2;
+    NodoMatriz *aux2 = nullptr;
     while (aux != nullptr) {
         aux2 = aux;
         while (aux2 != nullptr) {
-            dot += "node[shape = box];\n" + aux2->getUsuario()->getUsername() + ";\n node[shape = circle];\n";
+            dot += "node[shape=box color=transparent fillcolor=\"#808080\"];\n" + aux2->getUsuario()->getUsername() + ";\nnode[shape = circle];\n";
             dot += aux2->getUsuario()->getReporteArbol()->reporteActivosCabeceras(aux2->getUsuario()->getArbol()->getRaiz(), dot);
             aux2 = aux2->getAtras();
         }
@@ -35,14 +34,14 @@ void ReporteMatriz::reporteActivosEmpresa(std::string empresa) {
 }
 
 void ReporteMatriz::reporteActivosDepartamento(std::string departamento) {
-    std::string dot = "digraph{\nrankdir = TB\nnode[shape = box, color = red]\n" + departamento + "\n";
+    std::string dot = "digraph{\nrankdir = TB;\nlabel = \"Activos de un Departamento\";\nlabelloc = t;\nnode[style = filled];\nnode[shape=box color=red fillcolor=\"#8080F0\"];\n" + departamento + ";\n";
     NodoMatriz *nodoDepartemento = this->matrizDispersa->existeDepartamento(departamento);
     NodoMatriz *aux = nodoDepartemento->getAbajo();
-    NodoMatriz *aux2;
+    NodoMatriz *aux2 = nullptr;
     while (aux != nullptr) {
         aux2 = aux;
         while (aux2 != nullptr) {
-            dot += "node[shape = box];\n" + aux2->getUsuario()->getUsername() + ";\n node[shape = circle];\n";
+            dot += "node[shape=box color=transparent fillcolor=\"#808080\"];\n" + aux2->getUsuario()->getUsername() + ";\n node[shape = circle];\n";
             dot += aux2->getUsuario()->getReporteArbol()->reporteActivosCabeceras(aux2->getUsuario()->getArbol()->getRaiz(), dot);
             aux2 = aux2->getAtras();
         }

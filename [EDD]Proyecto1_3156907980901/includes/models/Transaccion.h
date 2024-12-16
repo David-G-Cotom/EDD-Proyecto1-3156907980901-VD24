@@ -5,7 +5,6 @@
 #ifndef TRANSACCION_H
 #define TRANSACCION_H
 #include <string>
-
 #include "Activo.h"
 
 
@@ -21,7 +20,6 @@ private:
     int dias;
 
 public:
-    Transaccion();
     Transaccion(Activo *activo, std::string usuario, std::string departamentoUsuario, std::string empresaUsuario, std::string fecha, int dias);
 
     std::string getId();

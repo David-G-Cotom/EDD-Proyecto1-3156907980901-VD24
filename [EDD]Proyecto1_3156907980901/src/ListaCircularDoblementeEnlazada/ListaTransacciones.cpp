@@ -3,7 +3,6 @@
 //
 
 #include "../../includes/ListaCircularDoblementeEnlazada/ListaTransacciones.h"
-
 #include <iostream>
 #include <ostream>
 

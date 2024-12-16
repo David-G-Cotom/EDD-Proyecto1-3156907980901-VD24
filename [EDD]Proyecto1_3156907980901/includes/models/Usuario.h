@@ -5,7 +5,6 @@
 #ifndef USUARIO_H
 #define USUARIO_H
 #include <string>
-
 #include "../ArbolAVL/ArbolAVL.h"
 #include "../ArbolAVL/ReporteArbolAVL.h"
 
