@@ -5,11 +5,12 @@
 #include "../../includes/models/Activo.h"
 #include "../../includes/utils/Utils.h"
 
-Activo::Activo(std::string nombre, std::string descripcion) {
+Activo::Activo(std::string nombre, std::string descripcion, int diasDisponibles) {
     this->id = Utils::generarIDAlfanumerico();
     this->nombre = nombre;
     this->descripcion = descripcion;
     this->disponibilidad = true;
+    this->diasDisponibles = diasDisponibles;
 }
 
 std::string Activo::getId() {
@@ -44,6 +45,12 @@ void Activo::setDisponibilidad(bool disponibilidad) {
     this->disponibilidad = disponibilidad;
 }
 
+int Activo::getDiasDisponibles() {
+    return diasDisponibles;
+}
 
+void Activo::setDiasDisponibles(int diasDisponibles) {
+    this->diasDisponibles = diasDisponibles;
+}
 
 

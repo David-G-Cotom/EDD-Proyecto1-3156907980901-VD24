@@ -29,7 +29,7 @@ private:
 
     NodoArbol *masDerecha(NodoArbol *&nodo);
 
-    void equilibrarArbol(NodoArbol *raiz);
+    void equilibrarArbol(NodoArbol *&raiz);
 
     void mostrarActivosPreOrden(NodoArbol *nodo, bool disponibilidadActivos);
 

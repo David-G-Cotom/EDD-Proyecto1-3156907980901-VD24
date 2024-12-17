@@ -94,31 +94,31 @@ void MatrizDispersa::insretarUsuario(Usuario *usuario, std::string departamento,
     NodoMatriz *usuarios = existeNodoInterseccion(departamento, empresa);
     if (usuarios != nullptr) {
         if (existeUsuario(usuarios, usuario->getUsername(), usuario->getPassword())) {
-            std::cout << "Error!!! El usuario ingresado ya se encuentra en el Departamento y Empresa" << std::endl;
+            std::cout << ">> Error!!! El usuario ingresado ya se encuentra en el Departamento y Empresa" << std::endl;
         } else {
-            char opcion;
+            int opcion;
             do {
-                std::cout << "¿En que posicion quiere guardar al usuario?" << std::endl;
-                std::cout << "1.Delante de los Usuarios actuales" << std::endl;
-                std::cout << "2.Atras de los usuario actuales" << std::endl;
-                std::cin >> opcion;
+                std::cout << ">> ¿En que posicion quiere guardar al usuario?" << std::endl;
+                std::cout << ">> 1.Delante de los Usuarios actuales" << std::endl;
+                std::cout << ">> 2.Atras de los usuario actuales" << std::endl;
+                Utils::verificarEntradaNumerica(opcion, ">> Opcion: ");
                 switch (opcion) {
-                    case '1': {
+                    case 1: {
                         insertarUsuarioEnFrente(usuarioNuevo, usuarios);
-                        std::cout << "Nuevo Usuario Ingresado al Sistema" << std::endl;
+                        std::cout << ">> Nuevo Usuario Ingresado al Sistema" << std::endl;
                         break;
                     }
-                    case '2': {
+                    case 2: {
                         insertarUsuarioAtras(usuarioNuevo, usuarios);
-                        std::cout << "Nuevo Usuario Ingresado al Sistema" << std::endl;
+                        std::cout << ">> Nuevo Usuario Ingresado al Sistema" << std::endl;
                         break;
                     }
                     default: {
-                        std::cout << "Error!!! Opcion no valida." << std::endl;
+                        std::cout << ">> Error!!! Opcion no valida." << std::endl;
                         break;
                     }
                 }
-            } while (opcion != '1' && opcion != '2');
+            } while (opcion != 1 && opcion != 2);
         }
         return;
     }
@@ -152,7 +152,7 @@ void MatrizDispersa::insretarUsuario(Usuario *usuario, std::string departamento,
     } else {
         insertarMedioUsuarioVertical(usuarioNuevo, auxCabeceraVertical);
     }
-    std::cout << "Nuevo Usuario Ingresado al Sistema" << std::endl;
+    std::cout << ">> Nuevo Usuario Ingresado al Sistema" << std::endl;
 }
 
 NodoMatriz *MatrizDispersa::insertarDepartamento(std::string nombreCabecera) {
@@ -191,7 +191,7 @@ NodoMatriz *MatrizDispersa::insertarEmpresa(std::string nombreCabecera) {
 void MatrizDispersa::insertarUsuarioFinal(NodoMatriz *usuarioNuevo, NodoMatriz *cabeceraHorizontal, NodoMatriz *cabeceraVertical) {
     insertarUsuarioFinalHorizontal(usuarioNuevo, cabeceraHorizontal);
     insertarUsuarioFinalVertical(usuarioNuevo, cabeceraVertical);
-    std::cout << "Registro Realizado con Exito!!!" << std::endl;
+    std::cout << ">> Registro de Usuario Realizado con Exito!!!" << std::endl;
 }
 
 void MatrizDispersa::insertarUsuarioFinalHorizontal(NodoMatriz *usuarioNuevo, NodoMatriz *cabeceraHorizontal) {
@@ -334,6 +334,7 @@ NodoArbol *MatrizDispersa::catalogoActivos(Usuario *usuario, bool disponibilidad
     if (!this->isVacia()) {
         return this->catalogoActivos(usuario, this->cabeceraVertical, disponibilidadActivos, idActivo);
     }
+    return nullptr;
 }
 
 NodoArbol *MatrizDispersa::catalogoActivos(Usuario *usuario, NodoMatriz *nodo, bool disponibilidadActivos, std::string idActivo) {
@@ -354,11 +355,12 @@ NodoArbol *MatrizDispersa::catalogoActivos(Usuario *usuario, NodoMatriz *nodo, b
 
                     }
                 }
-                aux2 = aux->getAtras();
+                aux2 = aux2->getAtras();
             } while (aux2 != nullptr);
         }
         return catalogoActivos(usuario, nodo->getAbajo(), disponibilidadActivos, idActivo);
     }
+    return nullptr;
 }
 
 

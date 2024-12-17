@@ -20,17 +20,51 @@ ReporteLista *reporteLista = new ReporteLista(listaTransacciones);
 
 void Menus::cargarDatos() {
     std::cout << "RECUPERANDO DATOS..." << std::endl;
-    matrizDispersa->insretarUsuario(new Usuario("U1", "U1", "123"), "Guatemala", "IGSS");
-    matrizDispersa->insretarUsuario(new Usuario("U2", "U2", "123"), "Jutiapa", "IGSS");
-    matrizDispersa->insretarUsuario(new Usuario("U3", "U3", "123"), "Guatemala", "Cinepolis");
-    matrizDispersa->insretarUsuario(new Usuario("U4", "U4", "123"), "Escuintla", "Max");
-    matrizDispersa->insretarUsuario(new Usuario("U5", "U5", "123"), "Jutiapa", "Max");//Funciona pero desforma la matriz
-    matrizDispersa->insretarUsuario(new Usuario("U6", "U6", "123"), "Jutiapa", "Cinepolis");
-    //matrizDispersa->insretarUsuario(new Usuario("U7", "U7", "123"), "Guatemala", "IGSS");
-    //matrizDispersa->insretarUsuario(new Usuario("U7.1", "U7.1", "123"), "Guatemala", "IGSS");
-    matrizDispersa->insretarUsuario(new Usuario("U8", "U8", "123"), "Peten", "Cinepolis");
-    matrizDispersa->insretarUsuario(new Usuario("U9", "U9", "123"), "Escuintla", "IGSS");//Funciona pero desforma la matriz
-    matrizDispersa->insretarUsuario(new Usuario("U10", "U10", "123"), "Escuintla", "Cinepolis");
+
+    auto *usuario1 = new Usuario("Elian Estrada", "elian_estrada", "1234");
+    matrizDispersa->insretarUsuario(usuario1, "guatemala", "igss");
+    usuario1->getArbol()->insertar(new Activo("madera", "madera para albañil", 20));
+    usuario1->getArbol()->insertar(new Activo("martillos", "martillos para madera", 10));
+    usuario1->getArbol()->insertar(new Activo("caladora", "caladora para cortar maderas prefabricadas", 15));
+    usuario1->getArbol()->insertar(new Activo("barreno", "barreno para concreto", 5));
+
+    matrizDispersa->insretarUsuario(new Usuario("Juan Perez", "juanito", "4567"), "jutiapa", "max");
+    matrizDispersa->insretarUsuario(new Usuario("Pedro Rodriguez", "pedrito", "48956"), "jalapa", "usac");
+
+    auto *usuario4 = new Usuario("Maria Fernanda", "mafer", "54312");
+    matrizDispersa->insretarUsuario(usuario4, "peten", "cinepolis");
+    usuario4->getArbol()->insertar(new Activo("audifonos", "audifonos para grabaciones de estudio", 10));
+    usuario4->getArbol()->insertar(new Activo("microfonos", "microfonos de todo tipo", 8));
+    usuario4->getArbol()->insertar(new Activo("pedestales", "pedestales para microfonos grandes y pequeños", 12));
+    usuario4->getArbol()->insertar(new Activo("atriles", "atriles para colocar ojas con gancho", 14));
+
+    matrizDispersa->insretarUsuario(new Usuario("Juan Manuel", "juanma", "32897"), "guatemala", "usac");
+
+    auto *usuario6 = new Usuario("Carlos Perez", "casimiro", "721896");
+    matrizDispersa->insretarUsuario(usuario6, "guatemala", "max");
+    usuario6->getArbol()->insertar(new Activo("balanza", "balanza con maximo de 25kg", 15));
+    usuario6->getArbol()->insertar(new Activo("canastas", "canastas para frutas y verduras", 45));
+    usuario6->getArbol()->insertar(new Activo("linternas", "linternas para alumbrar cuartos oscuros", 10));
+    usuario6->getArbol()->insertar(new Activo("cargadores", "cargadores de telefonos tipo c", 5));
+    usuario6->getArbol()->insertar(new Activo("cables", "cables de todo tipo", 10));
+    usuario6->getArbol()->insertar(new Activo("lazos", "lazos para tender ropa", 20));
+
+    auto *usuario7 = new Usuario("Fernando Mendez", "fuego03", "891346");
+    matrizDispersa->insretarUsuario(usuario7, "jutiapa", "cinepolis");
+    usuario7->getArbol()->insertar(new Activo("termos", "pequeños termos para bebidas calientes", 10));
+    usuario7->getArbol()->insertar(new Activo("maletas", "maletas desde pequeñas a grandes", 15));
+    usuario7->getArbol()->insertar(new Activo("peliculas", "todo tipo de peliculas de accion", 5));
+
+    matrizDispersa->insretarUsuario(new Usuario("Alejandra Guzman", "azurdia", "780145"), "jutiapa", "usac");
+
+    auto *usuario9 = new Usuario("Iraldo Martinez", "incrediboy", "201598");
+    matrizDispersa->insretarUsuario(usuario9, "jutiapa", "max");
+    usuario9->getArbol()->insertar(new Activo("casest", "casets con musica de todo tipo", 5));
+    usuario9->getArbol()->insertar(new Activo("pantallas", "pantallas para proyección", 10));
+    usuario9->getArbol()->insertar(new Activo("cañonera", "cañonera para proyeccion", 10));
+    usuario9->getArbol()->insertar(new Activo("toldo", "toldo para eventos al exterior", 5));
+
+    matrizDispersa->insretarUsuario(new Usuario("Antonio Lopez", "alcachofa", "20435"), "jutiapa", "usac");
 }
 
 void Menus::menuPrincipal() {
@@ -276,7 +310,10 @@ void Menus::menuUsuario(NodoMatriz *usuarioLogeado) {
                 std::string descripcion;
                 std::getline(std::cin, descripcion);
 
-                usuarioLogeado->getUsuario()->getArbol()->insertar(new Activo(nombre, descripcion));
+                int dias;
+                Utils::verificarEntradaNumerica(dias, ">> ...Ingrese los dias Disponibles para Rentar...: ");
+
+                usuarioLogeado->getUsuario()->getArbol()->insertar(new Activo(nombre, descripcion, dias));
                 break;
             }
             case 2: {
@@ -306,7 +343,7 @@ void Menus::menuUsuario(NodoMatriz *usuarioLogeado) {
             case 6: {
                 std::cout << "\n>> %%%%%%%%%%%%%%%%%%%% Mis Activos Rentados %%%%%%%%%%%%%%%%%%%%" <<std::endl;
                 if (!usuarioLogeado->getUsuario()->getArbol()->mostrarActivos(false)) {
-                    std::cout << ">> No hay Activos por Mostrar..." <<std::endl;
+                    std::cout << ">> No hay Activos por Mostrar..." << std::endl;
                     break;
                 }
                 regresarMenu();
@@ -428,7 +465,7 @@ void Menus::activosRentados(NodoMatriz *usuarioLogeado) {
             }
         } while (opcionElegida != 1 && opcionElegida != 2);
     } else {
-        std::cout << ">> No Tienes Activos Rentados!!!";
+        std::cout << ">> No Tienes Activos Rentados!!!" << std::endl;
     }
 }
 

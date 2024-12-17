@@ -97,7 +97,7 @@ bool ListaTransacciones::recorrerListaTransaccion(std::string usuario) {
         do {
             if (aux->getTransaccion()->getUsuario() == usuario
                 && !aux->getTransaccion()->getActivo()->getDisponibilidad()) {
-                std::cout << "ID = " << aux->getTransaccion()->getActivo()->getId()
+                std::cout << ">> ID = " << aux->getTransaccion()->getActivo()->getId()
                         << "; Nombre = " << aux->getTransaccion()->getActivo()->getNombre()
                         << "; Tiempo de Renta = " << aux->getTransaccion()->getDias() << std::endl;
             }
@@ -105,7 +105,7 @@ bool ListaTransacciones::recorrerListaTransaccion(std::string usuario) {
         } while (aux != this->inicio);
         return true;
     }
-    std::cout << "No hay Transacciones Disponibles";
+    std::cout << ">> No hay Transacciones Disponibles" << std::endl;
     return false;
 }
 

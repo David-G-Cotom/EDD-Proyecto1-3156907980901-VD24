@@ -2489,7 +2489,6 @@ CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.o: /mnt/e/Docume
   /usr/include/c++/13/bits/ranges_util.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
-  /usr/include/c++/13/bits/sstream.tcc \
   /usr/include/c++/13/bits/std_abs.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
@@ -2528,12 +2527,10 @@ CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Menus.cpp.o: /mnt/e/Docume
   /usr/include/c++/13/iosfwd \
   /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
-  /usr/include/c++/13/limits \
   /usr/include/c++/13/new \
   /usr/include/c++/13/numbers \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/pstl_config.h \
-  /usr/include/c++/13/sstream \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/streambuf \
   /usr/include/c++/13/string \
@@ -2837,8 +2834,6 @@ CMakeFiles/_EDD_Proyecto1_3156907980901.dir/src/utils/Utils.cpp.o: /mnt/e/Docume
 
 
 /usr/include/c++/13/sstream:
-
-/usr/include/c++/13/limits:
 
 /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2024/EVD24/EDD/Proyecto1/EDD-Proyecto1-3156907980901-VD24/[EDD]Proyecto1_3156907980901/src/utils/Utils.cpp:
 

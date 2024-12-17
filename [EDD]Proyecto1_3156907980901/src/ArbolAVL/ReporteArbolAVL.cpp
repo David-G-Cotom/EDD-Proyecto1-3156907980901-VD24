@@ -41,7 +41,8 @@ void ReporteArbolAVL::reporteActivosUsuario(NodoArbol *nodo, std::string usernam
         file << dot;
         file.close();
     }
-    system("dot -Tpng ../Graficas/ReporteActivosUsuario.txt -o ../Graficas/ReporteActivosPreOrden.png");
+    system("dot -Tpng ../Graficas/ReporteActivosUsuario.txt -o ../Graficas/ReporteActivosUsuario.png");
+    std::cout << ">> Reporte Generado!!!" << std::endl;
 }
 
 std::string ReporteArbolAVL::reporteActivosCabeceras(NodoArbol *nodo, std::string dot) {

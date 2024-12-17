@@ -20,6 +20,7 @@ void ArbolAVL::insertar(NodoArbol *activo, NodoArbol *&raiz) {
     if (raiz == nullptr) {
         raiz = activo;
         raiz->setFactorEquilibrio(this->factorEquilibrio(raiz));
+        std::cout << ">> Nuevo Activo Ingresado!!!" << std::endl;
         return;
     }
 
@@ -34,12 +35,13 @@ void ArbolAVL::insertar(NodoArbol *activo, NodoArbol *&raiz) {
 
 void ArbolAVL::eliminar(std::string idActivo, NodoArbol *&raiz) {
     if (raiz == nullptr) {
-        std::cout << "Error en Eliminar Activo!!! Activo NO Existente" << std::endl;;
+        std::cout << ">> Error en Eliminar Activo!!! Activo NO Existente" << std::endl;;
         return;
     }
     if (idActivo == raiz->getActivo()->getId()) {
         if (this->isHoja(raiz)) {
             raiz = nullptr;
+            std::cout << ">> Activo Eliminado Exitosamente!!!" << std::endl;
             return;
         }
 
@@ -65,6 +67,7 @@ void ArbolAVL::eliminar(std::string idActivo, NodoArbol *&raiz) {
     }
 
     this->equilibrarArbol(raiz);
+    std::cout << ">> Activo Eliminado Exitosamente!!!" << std::endl;
 }
 
 int ArbolAVL::alturaMax(NodoArbol *nodo) {
@@ -77,7 +80,9 @@ int ArbolAVL::alturaMax(NodoArbol *nodo) {
 }
 
 int ArbolAVL::factorEquilibrio(NodoArbol *nodo) {
-    return alturaMax(nodo->getHijoIzquierdo()) - alturaMax(nodo->getHijoDerecho());
+    int alturaIzquierda =  alturaMax(nodo->getHijoIzquierdo());
+    int alturaDerecha =  alturaMax(nodo->getHijoDerecho());
+    return alturaDerecha - alturaIzquierda;
 }
 
 void ArbolAVL::rotacionIzquierda(NodoArbol *&nodo) {
@@ -127,7 +132,7 @@ NodoArbol *ArbolAVL::masDerecha(NodoArbol *&nodo) {
     return masDerecha(nodo->getHijoDerecho());
 }
 
-void ArbolAVL::equilibrarArbol(NodoArbol *raiz) {
+void ArbolAVL::equilibrarArbol(NodoArbol *&raiz) {
     raiz->setFactorEquilibrio(this->factorEquilibrio(raiz));
     if (raiz->getFactorEquilibrio() < -1) {
         if (raiz->getHijoIzquierdo()->getFactorEquilibrio() > 0) {
@@ -175,12 +180,10 @@ NodoArbol *ArbolAVL::buscarActivo(std::string idActivo, NodoArbol *nodo) {
 void ArbolAVL::insertar(Activo *nuevoActivo) {
     auto *nuevoNodo = new NodoArbol(nuevoActivo);
     insertar(nuevoNodo, this->raiz);
-    std::cout << "Nuevo Activo Ingresado!!!" << std::endl;
 }
 
 void ArbolAVL::eliminar(std::string idActivo) {
     this->eliminar(idActivo, this->raiz);
-    std::cout << "Activo Eliminado Exitosamente!!!" << std::endl;
 }
 
 bool ArbolAVL::mostrarActivos(bool disponibilidadActivos) {
@@ -195,11 +198,11 @@ void ArbolAVL::modificarActivo(std::string idActivo, std::string nuevaDescripcio
     NodoArbol *activo = this->buscarActivo(idActivo, this->raiz);
     if (activo != nullptr) {
         activo->getActivo()->setDescripcion(nuevaDescripcion);
-        std::cout << "Activo Modificado:" << std::endl;
-        std::cout << "ID = " << activo->getActivo()->getId() << "; Nombre = " << activo->getActivo()->getNombre() << "; Descripcion = " << activo->getActivo()->getDescripcion() << std::endl;
+        std::cout << ">> Activo Modificado:" << std::endl;
+        std::cout << ">> ID = " << activo->getActivo()->getId() << "; Nombre = " << activo->getActivo()->getNombre() << "; Descripcion = " << activo->getActivo()->getDescripcion() << std::endl;
         return;
     }
-    std::cout << "No Existe el Activo";
+    std::cout << ">> No Existe el Activo";
 }
 
 
