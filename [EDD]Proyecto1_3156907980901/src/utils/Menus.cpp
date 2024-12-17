@@ -64,7 +64,7 @@ void Menus::cargarDatos() {
     usuario9->getArbol()->insertar(new Activo("cañonera", "cañonera para proyeccion", 10));
     usuario9->getArbol()->insertar(new Activo("toldo", "toldo para eventos al exterior", 5));
 
-    matrizDispersa->insretarUsuario(new Usuario("Antonio Lopez", "alcachofa", "20435"), "jutiapa", "usac");
+    matrizDispersa->insretarUsuario(new Usuario("Antonio Lopez", "alcachofa", "20435"), "jalapa", "usac");
 }
 
 void Menus::menuPrincipal() {
@@ -368,11 +368,11 @@ void Menus::modificarActivo(NodoMatriz *usuarioLogeado) {
         std::cout << ">> No hay Activos por Mostrar..." <<std::endl;
         return;
     }
-    std::cout << ">> ...Ingresar ID de Activo a Modificar...";
+    std::cout << ">> ...Ingresar ID de Activo a Modificar...: ";
     std::string idActivo;
     std::getline(std::cin, idActivo);
 
-    std::cout << ">> ...Ingresar Descripcion Nueva...";
+    std::cout << ">> ...Ingresar Descripcion Nueva...: ";
     std::string nuevaDescripcion;
     std::getline(std::cin, nuevaDescripcion);
 
